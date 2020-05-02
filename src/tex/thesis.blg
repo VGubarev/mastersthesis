@@ -1,0 +1,55 @@
+[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
+[0] Config.pm:307> INFO - Logfile is 'thesis.blg'
+[164] biber:322> INFO - === Fri May  1, 2020, 23:17:52
+[196] Biber.pm:415> INFO - Reading 'thesis.bcf'
+[435] Biber.pm:943> INFO - Found 0 citekeys in bib section 0
+[436] Biber.pm:943> INFO - Found 2 citekeys in bib section 1
+[436] Biber.pm:943> INFO - Found 5 citekeys in bib section 0
+[487] Biber.pm:4256> INFO - Processing section 0
+[488] Utils.pm:75> INFO - Globbing data source 'master-thesis.bib'
+[488] Utils.pm:91> INFO - Globbed data source 'master-thesis.bib' to master-thesis.bib
+[508] Biber.pm:4455> INFO - Looking for bibtex format file 'master-thesis.bib' for section 0
+[510] bibtex.pm:1653> INFO - LaTeX decoding ...
+[525] bibtex.pm:1471> INFO - Found BibTeX data source 'master-thesis.bib'
+[619] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[619] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[620] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[620] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[622] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[622] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[623] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[623] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[625] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[626] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[626] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[626] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[628] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[629] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[629] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[630] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[630] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[631] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[631] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[647] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[647] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[647] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'ru-RU'
+[647] Biber.pm:4090> INFO - No sort tailoring available for locale 'ru-RU'
+[661] Biber.pm:4256> INFO - Processing section 1
+[662] Utils.pm:75> INFO - Globbing data source 'master-thesis.bib'
+[662] Utils.pm:91> INFO - Globbed data source 'master-thesis.bib' to master-thesis.bib
+[662] Biber.pm:4455> INFO - Looking for bibtex format file 'master-thesis.bib' for section 1
+[688] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[689] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[689] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[689] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[690] Utils.pm:293> WARN - Unknown field 'volume' found in sorting template
+[691] Utils.pm:293> WARN - Unknown field 'book' found in sorting template
+[691] Utils.pm:293> WARN - Unknown field 'part' found in sorting template
+[691] Utils.pm:293> WARN - Unknown field 'issue' found in sorting template
+[707] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[707] UCollate.pm:68> INFO - Overriding locale 'ru-RU' defaults 'variable = shifted' with 'variable = non-ignorable'
+[707] Biber.pm:4084> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'ru-RU'
+[708] Biber.pm:4090> INFO - No sort tailoring available for locale 'ru-RU'
+[715] bbl.pm:652> INFO - Writing 'thesis.bbl' with encoding 'UTF-8'
+[725] bbl.pm:755> INFO - Output to thesis.bbl
+[726] Biber.pm:128> INFO - WARNINGS: 27
