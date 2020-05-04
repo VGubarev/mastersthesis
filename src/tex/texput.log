@@ -1,18 +1,18 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.4.20)  1 MAY 2020 22:49
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020/Debian) (preloaded format=xelatex 2020.4.20)  2 MAY 2020 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**itmo-student-thesis.tex
+**master-thesis.tex
 
 ! Emergency stop.
-<*> itmo-student-thesis.tex
-                           
+<*> master-thesis.tex
+                     
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
  2 strings out of 480085
- 29 string characters out of 5905598
+ 23 string characters out of 5905598
  242941 words of memory out of 5000000
  17546 multiletter control sequences out of 15000+600000
  532338 words of font info for 24 fonts, out of 8000000 for 9000

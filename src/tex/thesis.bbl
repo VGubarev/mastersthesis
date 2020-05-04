@@ -19,227 +19,218 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global}
-    \entry{example-russian}{article}{}
-      \name{author}{1}{}{%
-        {{hash=3770643e885dc887aec1f40899a83ca7}{%
-           family={Буздалов},
-           familyi={Б\bibinitperiod},
-           given={Максим\bibnamedelima Викторович},
-           giveni={М\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+    \entry{Smith2012DraftH}{online}{useauthor=false}
+      \name{author}{7}{}{%
+        {{hash=dfbdbc30b13543da7479c9f291e352d5}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a17d161e41f9dbfd5c8cd4c63a4df246}{%
+           family={Madhavapeddy},
+           familyi={M\bibinitperiod},
+           given={Anil},
+           giveni={A\bibinitperiod}}}%
+        {{hash=150da563e339b6cca53ddc52f5eaedaa}{%
+           family={Smowton},
+           familyi={S\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+        {{hash=090eda7bf97076b0df739ac29207efe5}{%
+           family={Schwarzkopf},
+           familyi={S\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod}}}%
+        {{hash=ba494cf2fcd5b5c3ed0f9d081c6a4556}{%
+           family={Mortier},
+           familyi={M\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ae4b8fa8c5628beeb183f814b5bbfcae}{%
+           family={Hand},
+           familyi={H\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=6910896e01ef593c5289a009a5d49ca5}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Robert\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
       }
-      \strng{namehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{fullhash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{bibnamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authorbibnamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authornamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authorfullhash}{3770643e885dc887aec1f40899a83ca7}
-      \field{sortinit}{Б}
-      \field{sortinithash}{05881de35da99e552a91b83ba64545ca}
+      \list{publisher}{1}{%
+        {Citeseer}%
+      }
+      \strng{authorbibnamehash}{42e1050b2cf498c610a1c36a6db7ddc3}
+      \strng{authornamehash}{42e1050b2cf498c610a1c36a6db7ddc3}
+      \strng{authorfullhash}{9f1ac1f025e54b247d225ad3f8bd231b}
+      \field{sortinit}{D}
+      \field{sortinithash}{c438b3d5d027251ba63f5ed538d98af5}
+      \field{labeltitlesource}{title}
+      \field{title}{Draft: Have you checked your IPC performance lately?}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.semanticscholar.org/paper/Draft-%3A-Have-you-checked-your-IPC-performance-Smith-Madhavapeddy/1cb3b82e2ef6a95b576573b8af0f3ec6f7bc21d9
+      \endverb
+      \verb{url}
+      \verb https://www.semanticscholar.org/paper/Draft-%3A-Have-you-checked-your-IPC-performance-Smith-Madhavapeddy/1cb3b82e2ef6a95b576573b8af0f3ec6f7bc21d9
+      \endverb
+    \endentry
+    \entry{BoostInterprocess}{online}{}
+      \name{author}{1}{}{%
+        {{hash=a6dfe17f317c352dd018615f782657f9}{%
+           family={Gaztanaga},
+           familyi={G\bibinitperiod},
+           given={Ion},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{a6dfe17f317c352dd018615f782657f9}
+      \strng{fullhash}{a6dfe17f317c352dd018615f782657f9}
+      \strng{bibnamehash}{a6dfe17f317c352dd018615f782657f9}
+      \strng{authorbibnamehash}{a6dfe17f317c352dd018615f782657f9}
+      \strng{authornamehash}{a6dfe17f317c352dd018615f782657f9}
+      \strng{authorfullhash}{a6dfe17f317c352dd018615f782657f9}
+      \field{sortinit}{G}
+      \field{sortinithash}{62eb2aa29549e4fdbd3cb154ec5711cb}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Научно-технический вестник {СПбГУ} {ИТМО}}
-      \field{langid}{russian}
-      \field{title}{Генерация тестов для олимпиадных задач по программированию с использованием генетических алгоритмов}
-      \field{year}{2011}
-      \field{number}{2(72)}
-      \range{number}{-1}
-      \field{pages}{72\bibrangedash 77}
-      \range{pages}{6}
+      \field{title}{Chapter 18. Boost.Interprocess}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.boost.org/doc/libs/1_63_0/doc/html/interprocess.html
+      \endverb
+      \verb{url}
+      \verb https://www.boost.org/doc/libs/1_63_0/doc/html/interprocess.html
+      \endverb
     \endentry
-    \entry{bellman}{book}{}
+    \entry{LTTngSite}{online}{}
+      \field{sortinit}{L}
+      \field{sortinithash}{dad3efd0836470093a7b4a7bb756eb8c}
+      \field{labeltitlesource}{title}
+      \field{title}{LTTng: an open source tracing framework for Linux}
+      \field{urlday}{25}
+      \field{urlmonth}{3}
+      \field{urlyear}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://lttng.org/
+      \endverb
+      \verb{url}
+      \verb https://lttng.org/
+      \endverb
+    \endentry
+    \entry{IPCInterVirtualMachineShmemOptimizations}{thesis}{}
       \name{author}{1}{}{%
-        {{hash=484543699a93b5c7a771de9c1b191137}{%
-           family={Bellman},
-           familyi={B\bibinitperiod},
-           given={R.\bibnamedelimi E.},
-           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=da13612f4f40d4e894e6a2c75aa7e3fc}{%
+           family={Macdonell},
+           familyi={M\bibinitperiod},
+           given={A.\bibnamedelimi Cameron},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {University of Alberta}%
+      }
+      \list{language}{1}{%
+        {english}%
       }
       \list{location}{1}{%
-        {Princeton, NJ}%
+        {Department of Computing Science}%
       }
-      \list{publisher}{1}{%
-        {Princeton University Press}%
-      }
-      \strng{namehash}{484543699a93b5c7a771de9c1b191137}
-      \strng{fullhash}{484543699a93b5c7a771de9c1b191137}
-      \strng{bibnamehash}{484543699a93b5c7a771de9c1b191137}
-      \strng{authorbibnamehash}{484543699a93b5c7a771de9c1b191137}
-      \strng{authornamehash}{484543699a93b5c7a771de9c1b191137}
-      \strng{authorfullhash}{484543699a93b5c7a771de9c1b191137}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \strng{namehash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \strng{fullhash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \strng{bibnamehash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \strng{authorbibnamehash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \strng{authornamehash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \strng{authorfullhash}{da13612f4f40d4e894e6a2c75aa7e3fc}
+      \field{sortinit}{M}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{langid}{english}
-      \field{pagetotal}{342}
-      \field{title}{Dynamic Programming}
-      \field{year}{1957}
-    \endentry
-    \entry{unrestricted-jump-evco}{article}{}
-      \name{author}{3}{}{%
-        {{hash=f96d9251f05e1270fbdc2ec90bbd7018}{%
-           family={Buzdalov},
-           familyi={B\bibinitperiod},
-           given={Maxim},
-           giveni={M\bibinitperiod}}}%
-        {{hash=31e296f14b85dca631fe682b68c6c371}{%
-           family={Doerr},
-           familyi={D\bibinitperiod},
-           given={Benjamin},
-           giveni={B\bibinitperiod}}}%
-        {{hash=3ee5fa32626ef1db8f193a744ab81482}{%
-           family={Kever},
-           familyi={K\bibinitperiod},
-           given={Mikhail},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \strng{fullhash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \strng{bibnamehash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \strng{authorbibnamehash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \strng{authornamehash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \strng{authorfullhash}{5b254c428f3d82aff033f08f9b5dc66a}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Evolutionary Computation}
-      \field{langid}{english}
-      \field{note}{Accepted for publication}
-      \field{title}{The Unrestricted Black-Box Complexity of Jump Functions}
-      \field{year}{2016}
-    \endentry
-    \entry{example-english}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=f96d9251f05e1270fbdc2ec90bbd7018}{%
-           family={Buzdalov},
-           familyi={B\bibinitperiod},
-           given={Maxim},
-           giveni={M\bibinitperiod}}}%
-        {{hash=221c25e7aa38145b0c897ca630e62869}{%
-           family={Shalyto},
-           familyi={S\bibinitperiod},
-           given={Anatoly},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{fullhash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{bibnamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authorbibnamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authornamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authorfullhash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of IEEE Congress on Evolutionary Computation}
-      \field{langid}{english}
-      \field{title}{Hard Test Generation for Augmenting Path Maximum Flow Algorithms using Genetic Algorithms: Revisited}
-      \field{year}{2015}
-      \field{pages}{2121\bibrangedash 2128}
-      \range{pages}{8}
-    \endentry
-    \entry{nsga-ii-steady-state}{incollection}{}
-      \name{author}{2}{}{%
-        {{hash=a0369e0676db70d41be0e16cb4b3b842}{%
-           family={Nebro},
-           familyi={N\bibinitperiod},
-           given={Antonio\bibnamedelima J.},
-           giveni={A\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-        {{hash=b9b5306437f836fd6cb2e77b7d4af872}{%
-           family={Durillo},
-           familyi={D\bibinitperiod},
-           given={Juan\bibnamedelima J.},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Springer Berlin Heidelberg}%
-      }
-      \strng{namehash}{03663ccffb70d5f61e98638025b11612}
-      \strng{fullhash}{03663ccffb70d5f61e98638025b11612}
-      \strng{bibnamehash}{03663ccffb70d5f61e98638025b11612}
-      \strng{authorbibnamehash}{03663ccffb70d5f61e98638025b11612}
-      \strng{authornamehash}{03663ccffb70d5f61e98638025b11612}
-      \strng{authorfullhash}{03663ccffb70d5f61e98638025b11612}
-      \field{sortinit}{N}
-      \field{sortinithash}{98cf339a479c0454fe09153a08675a15}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Nature-Inspired Algorithms for Optimisation}
-      \field{langid}{english}
-      \field{series}{Studies in Computational Intelligence}
-      \field{title}{On the Effect of Applying a Steady-State Selection Scheme in the Multi-Objective Genetic Algorithm {NSGA}-{II}}
-      \field{year}{2009}
-      \field{number}{193}
-      \range{number}{1}
-      \field{pages}{435\bibrangedash 456}
-      \range{pages}{22}
-    \endentry
-  \enddatalist
-\endrefsection
-
-\refsection{1}
-  \datalist[entry]{nyt/global//global/global}
-    \entry{example-russian}{article}{}
-      \name{author}{1}{}{%
-        {{hash=3770643e885dc887aec1f40899a83ca7}{%
-           family={Буздалов},
-           familyi={Б\bibinitperiod},
-           given={Максим\bibnamedelima Викторович},
-           giveni={М\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
-      }
-      \strng{namehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{fullhash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{bibnamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authorbibnamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authornamehash}{3770643e885dc887aec1f40899a83ca7}
-      \strng{authorfullhash}{3770643e885dc887aec1f40899a83ca7}
-      \field{sortinit}{Б}
-      \field{sortinithash}{05881de35da99e552a91b83ba64545ca}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Научно-технический вестник {СПбГУ} {ИТМО}}
-      \field{langid}{russian}
-      \field{title}{Генерация тестов для олимпиадных задач по программированию с использованием генетических алгоритмов}
+      \field{title}{Shared-Memory Optimizations for Virtual Machines}
+      \field{type}{PhD dissertation}
       \field{year}{2011}
-      \true{nocite}
-      \field{number}{2(72)}
-      \range{number}{-1}
-      \field{pages}{72\bibrangedash 77}
-      \range{pages}{6}
+      \verb{doi}
+      \verb https://doi.org/10.7939/R3Q715
+      \endverb
     \endentry
-    \entry{example-english}{inproceedings}{}
-      \name{author}{2}{}{%
-        {{hash=f96d9251f05e1270fbdc2ec90bbd7018}{%
-           family={Buzdalov},
-           familyi={B\bibinitperiod},
-           given={Maxim},
-           giveni={M\bibinitperiod}}}%
-        {{hash=221c25e7aa38145b0c897ca630e62869}{%
-           family={Shalyto},
-           familyi={S\bibinitperiod},
-           given={Anatoly},
-           giveni={A\bibinitperiod}}}%
+    \entry{IPCInterVirtualMachineShmem}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=c021dfb9e064310bef2e1c4f44ef04b6}{%
+           family={Xiaodi},
+           familyi={X\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod}}}%
       }
-      \strng{namehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{fullhash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{bibnamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authorbibnamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authornamehash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \strng{authorfullhash}{888d87a2b2c516f90fd0f7d2b53dad74}
-      \field{sortinit}{B}
-      \field{sortinithash}{8de16967003c7207dae369d874f1456e}
+      \list{institution}{1}{%
+        {University of Alberta}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \list{location}{1}{%
+        {Department of Computing Science}%
+      }
+      \strng{namehash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \strng{fullhash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \strng{bibnamehash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \strng{authorbibnamehash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \strng{authornamehash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \strng{authorfullhash}{c021dfb9e064310bef2e1c4f44ef04b6}
+      \field{sortinit}{X}
+      \field{sortinithash}{e90038f30fa4b9ce59606fc8347e3cc7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of IEEE Congress on Evolutionary Computation}
-      \field{langid}{english}
-      \field{title}{Hard Test Generation for Augmenting Path Maximum Flow Algorithms using Genetic Algorithms: Revisited}
-      \field{year}{2015}
-      \true{nocite}
-      \field{pages}{2121\bibrangedash 2128}
-      \range{pages}{8}
+      \field{title}{Interprocess Communication Mechanisms With Inter-Virtual Machine Shared Memory}
+      \field{type}{Master's dissertation}
+      \field{year}{2011}
+      \verb{doi}
+      \verb https://doi.org/10.7939/R3PH6H
+      \endverb
+    \endentry
+    \entry{LTTngThesis}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=8457fc3367b81474b5694d1b535d2767}{%
+           family={Кузичкина},
+           familyi={К\bibinitperiod},
+           given={Анастасия},
+           giveni={А\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Университет ИТМО}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \list{location}{1}{%
+        {Факультет ПИиКТ}%
+      }
+      \strng{namehash}{8457fc3367b81474b5694d1b535d2767}
+      \strng{fullhash}{8457fc3367b81474b5694d1b535d2767}
+      \strng{bibnamehash}{8457fc3367b81474b5694d1b535d2767}
+      \strng{authorbibnamehash}{8457fc3367b81474b5694d1b535d2767}
+      \strng{authornamehash}{8457fc3367b81474b5694d1b535d2767}
+      \strng{authorfullhash}{8457fc3367b81474b5694d1b535d2767}
+      \field{sortinit}{К}
+      \field{sortinithash}{05cb2e965a41fdb34ef93bddb323e27f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{6}
+      \field{title}{Исследование и разработка методов трассировки событий в параллельных и распределенных системах}
+      \field{type}{Пояснительная записка выпускной квалификационной работы}
+      \field{year}{2017}
     \endentry
   \enddatalist
+  \missing{bellman}
+  \missing{example-english}
+  \missing{example-russian}
+  \missing{nsga-ii-steady-state}
+  \missing{unrestricted-jump-evco}
 \endrefsection
 \endinput
 

@@ -176,7 +176,7 @@
 \addto{\captionsrussian}{%
 \renewcommand{\@iflfe}[2]{#2}%
 \renewcommand*{\figurename}{Рисунок}%
-\renewcommand*{\contentsname}{ОгContentsлавление}%
+\renewcommand*{\contentsname}{ОГЛАВЛЕНИЕ}%
 \renewcommand*{\labelenumi}{\asbukx{enumi})}%
 \renewcommand*{\theenumi}{\asbukx{enumi}}%
 \renewcommand*{\@tablecontinuation}[1]{Продолжение таблицы~#1}%

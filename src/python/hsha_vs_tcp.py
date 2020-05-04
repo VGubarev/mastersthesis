@@ -9,8 +9,8 @@ import seaborn as sns
 # example data
 tcpdata = genfromtxt("data/tcp/se_sc_latency")
 np.append(tcpdata, genfromtxt("data/tcp/sc_se_latency"))
-hshadata = genfromtxt("data/hsha/sc_se_latency")
-np.append(hshadata, genfromtxt("data/hsha/se_sc_latency"))
+hshadata = genfromtxt("data/hsha/se_sc_latency")
+np.append(hshadata, genfromtxt("data/hsha/sc_se_latency"))
 
 base_count = 40
 bins = np.arange(0, base_count, 1)
@@ -20,7 +20,7 @@ fig, ax = plt.subplots()
 
 # pois = np.random.gamma(3.3, 0.8, x.size) + 7
 sns.distplot(np.clip(tcpdata, bins[0], bins[-1]), bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC', label='TCP + системный мультиплексор')
-sns.distplot(np.clip(hshadata, bins[0], bins[-1]), bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#FF0000', label='Мультиплексор в разделяемой памяти + futex')
+sns.distplot(np.clip(hshadata, bins[0], bins[-1]), bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#FF0000', label='Мультиплексор в разделяемой памяти')
 xlabels = bins[0:-1].astype(str)
 xlabels[-1] += "+"
 plt.xlim([0, num_bins - 1])

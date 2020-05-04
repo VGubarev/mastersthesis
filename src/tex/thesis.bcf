@@ -3534,22 +3534,17 @@
     <bcf:datasource type="file" datatype="bibtex">master-thesis.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-  </bcf:section>
-  <!-- SECTION 1 -->
-  <bcf:bibdata section="1">
-    <bcf:datasource type="file" datatype="bibtex">master-thesis.bib</bcf:datasource>
-  </bcf:bibdata>
-  <bcf:section number="1">
-    <bcf:citekey order="1" nocite="1">example-english</bcf:citekey>
-    <bcf:citekey order="2" nocite="1">example-russian</bcf:citekey>
-  </bcf:section>
-  <!-- SECTION 0 (cont.) -->
-  <bcf:section number="0">
-    <bcf:citekey order="1">example-english</bcf:citekey>
-    <bcf:citekey order="1">example-russian</bcf:citekey>
-    <bcf:citekey order="1">unrestricted-jump-evco</bcf:citekey>
-    <bcf:citekey order="1">nsga-ii-steady-state</bcf:citekey>
-    <bcf:citekey order="2">bellman</bcf:citekey>
+    <bcf:citekey order="1">Smith2012DraftH</bcf:citekey>
+    <bcf:citekey order="2">IPCInterVirtualMachineShmem</bcf:citekey>
+    <bcf:citekey order="2">IPCInterVirtualMachineShmemOptimizations</bcf:citekey>
+    <bcf:citekey order="3">BoostInterprocess</bcf:citekey>
+    <bcf:citekey order="4">LTTngThesis</bcf:citekey>
+    <bcf:citekey order="5">LTTngSite</bcf:citekey>
+    <bcf:citekey order="6">example-english</bcf:citekey>
+    <bcf:citekey order="6">example-russian</bcf:citekey>
+    <bcf:citekey order="6">unrestricted-jump-evco</bcf:citekey>
+    <bcf:citekey order="6">nsga-ii-steady-state</bcf:citekey>
+    <bcf:citekey order="7">bellman</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
@@ -3597,15 +3592,6 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="1"
-                name="nyt/global//global/global"
-                type="entry"
-                sortingtemplatename="nyt"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
   <bcf:datalist section="0"
                 name="nyt/global//global/global"
                 type="entry"
