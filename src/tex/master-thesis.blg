@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[1] Config.pm:307> INFO - Logfile is 'master-thesis.blg'
-[180] biber:322> INFO - === Sat May  2, 2020, 21:02:00
-[237] Utils.pm:309> ERROR - Cannot find 'master-thesis.bcf'!
-[237] Biber.pm:132> INFO - ERRORS: 1

@@ -8,9 +8,9 @@ import seaborn as sns
 
 # example data
 tcpdata = genfromtxt("data/tcp/se_sc_latency")
-np.append(tcpdata, genfromtxt("data/tcp/sc_se_latency"))
+tcpdata = np.append(tcpdata, genfromtxt("data/tcp/sc_se_latency"))
 hshadata = genfromtxt("data/hsha/se_sc_latency")
-np.append(hshadata, genfromtxt("data/hsha/sc_se_latency"))
+hshadata = np.append(hshadata, genfromtxt("data/hsha/sc_se_latency"))
 
 base_count = 40
 bins = np.arange(0, base_count, 1)

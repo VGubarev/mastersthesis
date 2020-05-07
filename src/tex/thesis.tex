@@ -1,5 +1,5 @@
-\documentclass[times]{itmo-student-thesis}
-% specification,annotation,
+\documentclass[specification,annotation,times]{itmo-student-thesis}
+% 
 
 %% Опции пакета:
 %% - specification - если есть, генерируется задание, иначе не генерируется
@@ -18,11 +18,18 @@
 
 \usepackage{courier}
 
+\usepackage{svg}
+
+\hyphenation{Лидер/Последователи}
+\hyphenation{Полусинхронный/Полуреактивный}
+
 %% Данные пакеты необязательны к использованию в бакалаврских/магистерских
 %% Они нужны для иллюстративных целей
 %% Начало
 \usepackage{tikz}
+
 \usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
 
 %% Указываем файл с библиографией.
 \addbibresource{master-thesis.bib}
@@ -31,18 +38,17 @@
 
 \include{docs}
 
-%% Оглавление
 \tableofcontents
 
 \include{preface}
 
 \include{chapter11}
 
-\include{chapter12}
-
 \include{chapter21}
 
 \include{chapter31}
+
+\include{chapter41}
 
 \include{conclusion}
 

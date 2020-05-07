@@ -46,7 +46,7 @@
 
 %% Формируем отступы
 
-\RequirePackage[top=2cm, bottom=2cm, left=2.7cm, right=1.5cm]{geometry}
+\RequirePackage[top=2cm, bottom=2cm, left=2.5cm, right=1cm]{geometry}
 
 %% Эти пакеты слишком часто используются, чтобы их не включать
 
@@ -533,13 +533,13 @@
 \setcounter{secnumdepth}{3}
 \titleformat{\chapter}[block]{\normalsize\bfseries\center}{\@chaptername~\thechapter.~}%
 {0pt}{\begin{MakeUppercase}}[\end{MakeUppercase}\thispagestyle{\TheOnlyTruePageStyle}]
-\titlespacing{\chapter}{0pt}{-30pt}{0pt}
-\titleformat{\section}[block]{\normalsize\bfseries\center}{\thesection.~}{0pt}{}
-\titlespacing{\section}{0pt}{0pt}{0pt}
-\titleformat{\subsection}[block]{\normalsize\bfseries\center}{\thesubsection.~}{0pt}{}
-\titlespacing{\subsection}{0pt}{0pt}{0pt}
-\titleformat{\subsubsection}[block]{\normalsize\bfseries\center}{\thesubsubsection.~}{0pt}{}
-\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+\titlespacing{\chapter}{0pt}{-30pt}{30pt}
+\titleformat{\section}[block]{\normalsize\bfseries}{\thesection.~}{0pt}{}
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection.~}{0pt}{}
+\titlespacing{\subsection}{0pt}{10pt}{10pt}
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection.~}{0pt}{}
+\titlespacing{\subsubsection}{0pt}{10pt}{10pt}
 
 %% \appendix начинает приложения, которые должны правильно именоваться.
 
@@ -1149,8 +1149,8 @@
 %%% Параметр: Бакалавр/Магистр
 \renewcommand{\maketitle}[1]{
     \ifstrequal{#1}{Магистр}{
-        \providecommand{\thespecialization@ru}{Технологии разработки программного обеспечения}
-        \providecommand{\thespecialty@ru}{01.04.02~Прикладная математика и информатика}
+        \providecommand{\thespecialization@ru}{Информационно-вычислительные системы}
+        \providecommand{\thespecialty@ru}{09.04.04~Программная инженерия}
         \providecommand{\thespecialization@en}{Technologies of software engineering}
         \providecommand{\thespecialty@en}{01.04.02~Applied mathematics and informatics}
         \providecommand{\@strings@DegreeName@ru}{Магистр}
@@ -1191,7 +1191,7 @@
     \addtolength{\voffset}{3mm}
     \addtolength{\headsep}{-3mm}
 
-    \setcounter{page}{4}
+    \setcounter{page}{5}
     % Выключаем переносы в оглавлении
     \pretocmd{\tableofcontents}{\begingroup\banhyphens}{}{}
     \apptocmd{\tableofcontents}{\endgroup}{}{}

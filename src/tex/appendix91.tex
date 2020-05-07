@@ -1,142 +1,142 @@
 \chapter{Пример приложения}\label{sec:app:1}
-
-В приложениях рисунки, таблицы и другие подобные элементы нумеруются по приложениям с соответствующим префиксом. Проверим это.
-
-Листинг~\ref{lst4:apx} должен иметь номер А.1.
-
-\begin{algorithm}[!h]
-\caption{Исходный код и флоат \texttt{algorithm}}\label{lst4:apx}
-\begin{lstlisting}
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, world!");
-    }
-}
-\end{lstlisting}
-\end{algorithm}
-
-Рисунок~\ref{fig2:apx} должен иметь номер A.1.
-
-\begin{figure}[!h]
-\caption{Пример рисунка}\label{fig2:apx}
-\centering
-\begin{tikzpicture}[scale=0.7]
-\draw[thick,->] (0,0)--(3.5,0);
-\draw[thick,->] (0,0)--(0,3.5);
-\draw[very thick, red] (0,0)--(3,3);
-\draw[dashed] (3,0)--(3,3);
-\draw[dashed] (1.5,0)--(1.5,1.5);
-\end{tikzpicture}
-\end{figure}
-
-Таблица~\ref{tab3:apx} должна иметь номер A.1.
-
-\begin{table}[!h]
-\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx}
-\centering
-\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
--- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
-1  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
-2  & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28 & 30 & 32 & 34 \\\hline
-3  & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 \\\hline
-4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
-\end{tabularx}
-\end{table}
-
-Заодно проверим нумерованные и ненумерованные перечисления. Ненумерованные:
-\begin{itemize}
-    \item пункт А;
-    \item пункт Б;
-    \item пункт В.
-\end{itemize}
-
-Нумерованные списки нескольких уровней:
-\begin{enumerate}
-    \item первый элемент;
-    \item второй элемент с подэлементами:
-    \begin{enumerate}
-        \item первый подэлемент;
-        \item второй подэлемент;
-        \item третий подэлемент.
-    \end{enumerate}
-    \item третий элемент;
-    \item четвертый элемент;
-    \item пятый элемент;
-    \item шестой элемент;
-    \item седьмой элемент;
-    \item восьмой элемент;
-    \item девятый элемент;
-    \item десятый элемент.
-\end{enumerate}
-
+%
+%В приложениях рисунки, таблицы и другие подобные элементы нумеруются по приложениям с соответствующим префиксом. Проверим это.
+%
+%Листинг~\ref{lst4:apx} должен иметь номер А.1.
+%
+%\begin{algorithm}[!h]
+%\caption{Исходный код и флоат \texttt{algorithm}}\label{lst4:apx}
+%\begin{lstlisting}
+%public class HelloWorld {
+%    public static void main(String[] args) {
+%        System.out.println("Hello, world!");
+%    }
+%}
+%\end{lstlisting}
+%\end{algorithm}
+%
+%Рисунок~\ref{fig2:apx} должен иметь номер A.1.
+%
+%\begin{figure}[!h]
+%\caption{Пример рисунка}\label{fig2:apx}
+%\centering
+%\begin{tikzpicture}[scale=0.7]
+%\draw[thick,->] (0,0)--(3.5,0);
+%\draw[thick,->] (0,0)--(0,3.5);
+%\draw[very thick, red] (0,0)--(3,3);
+%\draw[dashed] (3,0)--(3,3);
+%\draw[dashed] (1.5,0)--(1.5,1.5);
+%\end{tikzpicture}
+%\end{figure}
+%
+%Таблица~\ref{tab3:apx} должна иметь номер A.1.
+%
+%\begin{table}[!h]
+%\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx}
+%\centering
+%\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
+%-- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
+%1  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
+%2  & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28 & 30 & 32 & 34 \\\hline
+%3  & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 \\\hline
+%4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
+%\end{tabularx}
+%\end{table}
+%
+%Заодно проверим нумерованные и ненумерованные перечисления. Ненумерованные:
+%\begin{itemize}
+%    \item пункт А;
+%    \item пункт Б;
+%    \item пункт В.
+%\end{itemize}
+%
+%Нумерованные списки нескольких уровней:
+%\begin{enumerate}
+%    \item первый элемент;
+%    \item второй элемент с подэлементами:
+%    \begin{enumerate}
+%        \item первый подэлемент;
+%        \item второй подэлемент;
+%        \item третий подэлемент.
+%    \end{enumerate}
+%    \item третий элемент;
+%    \item четвертый элемент;
+%    \item пятый элемент;
+%    \item шестой элемент;
+%    \item седьмой элемент;
+%    \item восьмой элемент;
+%    \item девятый элемент;
+%    \item десятый элемент.
+%\end{enumerate}
+%
 \chapter{Еще один пример приложения с неимоверно длиннющим названием для тестирования переносов}\label{sec:app:2}
-
-Проверим на примере таблиц, что нумерация в приложениях~--- по приложениям.
-Таблица~\ref{tab3:apx2} должна иметь номер Б.1.
-
-\begin{table}[!h]
-\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx2}
-\centering
-\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
--- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
-1  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
-2  & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28 & 30 & 32 & 34 \\\hline
-3  & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 \\\hline
-4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
-\end{tabularx}
-\end{table}
-
+%
+%Проверим на примере таблиц, что нумерация в приложениях~--- по приложениям.
+%Таблица~\ref{tab3:apx2} должна иметь номер Б.1.
+%
+%\begin{table}[!h]
+%\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx2}
+%\centering
+%\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
+%-- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
+%1  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
+%2  & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28 & 30 & 32 & 34 \\\hline
+%3  & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 \\\hline
+%4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
+%\end{tabularx}
+%\end{table}
+%
 \chapter{Пример огромного листинга}
-
-\begin{lstlisting}[caption={Пример большого листинга},label={lstX}]
-import java.util.*;
-
-public class Example {
-    static int[] restoreOutgoing(int[] g, int[] outgoing,
-                                 int vertex, int mask) {
-        int[] rv = new int[1 + Integer.bitCount(mask)];
-        int n = g.length;
-        int current = rv.length - 1;
-        while (true) {
-            rv[current] = vertex;
-            if (current == 0) {
-                if (vertex != 0) {
-                    throw new AssertionError();
-                }
-                return rv;
-            }
-            mask ^= 1 << (vertex - 1);
-            int prevMask = outgoing[mask] & g[vertex];
-            if (prevMask == 0) {
-                throw new AssertionError();
-            }
-            vertex = Integer.numberOfTrailingZeros(prevMask);
-            --current;
-        }
-    }
-
-    static int[] restoreIncoming(int[] g, int[] incoming,
-                                 int vertex, int mask) {
-        int[] rv = new int[1 + Integer.bitCount(mask)];
-        int n = g.length;
-        int current = 0;
-        while (true) {
-            rv[current] = vertex;
-            if (current == rv.length - 1) {
-                if (vertex != 0) {
-                    throw new AssertionError();
-                }
-                return rv;
-            }
-            mask ^= 1 << (vertex - 1);
-            int nextMask = incoming[mask] & g[vertex];
-            if (nextMask == 0) {
-                throw new AssertionError();
-            }
-            vertex = Integer.numberOfTrailingZeros(nextMask);
-            ++current;
-        }
-    }
-}
-\end{lstlisting}
-                
+%
+%\begin{lstlisting}[caption={Пример большого листинга},label={lstX}]
+%import java.util.*;
+%
+%public class Example {
+%    static int[] restoreOutgoing(int[] g, int[] outgoing,
+%                                 int vertex, int mask) {
+%        int[] rv = new int[1 + Integer.bitCount(mask)];
+%        int n = g.length;
+%        int current = rv.length - 1;
+%        while (true) {
+%            rv[current] = vertex;
+%            if (current == 0) {
+%                if (vertex != 0) {
+%                    throw new AssertionError();
+%                }
+%                return rv;
+%            }
+%            mask ^= 1 << (vertex - 1);
+%            int prevMask = outgoing[mask] & g[vertex];
+%            if (prevMask == 0) {
+%                throw new AssertionError();
+%            }
+%            vertex = Integer.numberOfTrailingZeros(prevMask);
+%            --current;
+%        }
+%    }
+%
+%    static int[] restoreIncoming(int[] g, int[] incoming,
+%                                 int vertex, int mask) {
+%        int[] rv = new int[1 + Integer.bitCount(mask)];
+%        int n = g.length;
+%        int current = 0;
+%        while (true) {
+%            rv[current] = vertex;
+%            if (current == rv.length - 1) {
+%                if (vertex != 0) {
+%                    throw new AssertionError();
+%                }
+%                return rv;
+%            }
+%            mask ^= 1 << (vertex - 1);
+%            int nextMask = incoming[mask] & g[vertex];
+%            if (nextMask == 0) {
+%                throw new AssertionError();
+%            }
+%            vertex = Integer.numberOfTrailingZeros(nextMask);
+%            ++current;
+%        }
+%    }
+%}
+%\end{lstlisting}
+%                

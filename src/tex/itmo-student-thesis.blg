@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14 (beta)
-[0] Config.pm:307> INFO - Logfile is 'itmo-student-thesis.blg'
-[173] biber:322> INFO - === Fri May  1, 2020, 13:34:51
-[226] Utils.pm:309> ERROR - Cannot find 'itmo-student-thesis.bcf'!
-[227] Biber.pm:132> INFO - ERRORS: 1
