@@ -11,6 +11,8 @@ from scipy import stats
 # example data
 trdata = genfromtxt("data/lf/tr_latency")
 trdata = np.append(trdata, genfromtxt("data/hsha/tr_latency"))
+trdata = np.append(trdata, genfromtxt("data/pure_tcp/tr_latency"))
+trdata = np.append(trdata, genfromtxt("data/spin/tr_latency"))
 trdata = np.append(trdata, genfromtxt("data/tcp/tr_latency"))
 
 low, high = np.percentile(trdata, [2.5, 97.5])

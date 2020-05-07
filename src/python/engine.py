@@ -13,6 +13,7 @@ enginedata = genfromtxt("data/lf/se_latency")
 enginedata = np.append(enginedata, genfromtxt("data/hsha/se_latency"))
 enginedata = np.append(enginedata, genfromtxt("data/tcp/se_latency"))
 enginedata = np.append(enginedata, genfromtxt("data/spin/se_latency"))
+enginedata = np.append(enginedata, genfromtxt("data/pure_tcp/se_latency"))
 
 mu, sigma = stats.norm.fit(enginedata)
 print ("Engine latency " + str(mu) + " ± " + str(1.96 * sigma))

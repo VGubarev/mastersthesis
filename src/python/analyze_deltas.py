@@ -46,4 +46,5 @@ print ("Signal TCP latency " + str(mean2) + " ± " + str(delta))
 print (len(deltas[(deltas >= low2) & (deltas <= high2)])/len(deltas[deltas <= 0.001]))
 
 sns.distplot(deltas[deltas <= 0.001], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+sns.distplot(deltas[deltas > 0.001], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
 plt.show()
