@@ -14,10 +14,10 @@ from scipy import stats
 # enginedata = np.append(enginedata, genfromtxt("data/tcp/se_latency"))
 # enginedata = np.append(enginedata, genfromtxt("data/spin/se_latency"))
 tests = [('lf','Лидер/Последователи', '#00ffff'),
-('hsha','Полусинхронный/Полуреактивный', '#a52a2a'),
-('tcp', 'Разделяемая память + TCP', '#f0e68c'),
-('pure_tcp','TCP', '#ff0000'),
-('spin','Активное ожидание', '#808000')]
+# ('hsha','Полусинхронный/Полуреактивный', '#a52a2a'),
+# ('tcp', 'Разделяемая память + TCP', '#f0e68c'),
+# ('pure_tcp','TCP', '#ff0000'),
+('spin/reduced','Reduced', '#808000')]
 data = []
 for test in tests:
     data.append((test, genfromtxt("data/" + test[0] + "/tr_latency")))
