@@ -8,8 +8,8 @@ from scipy import stats
 
 
 # example data
-lf1data = genfromtxt("data/spin/sc_se_latency")
-lf2data = genfromtxt("data/spin/se_sc_latency")
+lf1data = genfromtxt("data/spin/reduced/sc_se_latency")
+lf2data = genfromtxt("data/spin/reduced/se_sc_latency")
 
 low1, high1 = np.percentile(lf1data, [2.5, 97.5])
 mean1 = low1 + (high1 - low1) / 2

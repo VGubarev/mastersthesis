@@ -8,7 +8,7 @@ import datetime
 from scipy.stats import sem, t
 from scipy import mean
 
-f = open('data/spin/order.out', 'r')
+f = open('data/spin/reduced/bp.out', 'r')
 f1 = f.readlines()
 
 raw_deltas = []
@@ -45,6 +45,11 @@ print (np.max(deltas[deltas <= 0.001]))
 print ("Signal TCP latency " + str(mean2) + " ± " + str(delta))
 print (len(deltas[(deltas >= low2) & (deltas <= high2)])/len(deltas[deltas <= 0.001]))
 
-sns.distplot(deltas[deltas <= 0.001], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
-sns.distplot(deltas[deltas > 0.001], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+print (len(deltas[(deltas >= 0.000120) & (deltas <= 0.001)]))
+print (len(deltas[deltas <= 0.001]))
+
+fig, ax = plt.subplots()
+sns.distplot(deltas[(deltas >= 0.000120) & (deltas <= 0.001)], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+# sns.distplot(deltas[deltas > 0.001], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+# sns.distplot(deltas, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
 plt.show()

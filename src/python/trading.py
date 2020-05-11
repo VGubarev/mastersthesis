@@ -12,7 +12,7 @@ from scipy import stats
 trdata = genfromtxt("data/lf/tr_latency")
 trdata = np.append(trdata, genfromtxt("data/hsha/tr_latency"))
 trdata = np.append(trdata, genfromtxt("data/pure_tcp/tr_latency"))
-trdata = np.append(trdata, genfromtxt("data/spin/tr_latency"))
+trdata = np.append(trdata, genfromtxt("data/spin/reduced/tr_latency"))
 trdata = np.append(trdata, genfromtxt("data/tcp/tr_latency"))
 
 low, high = np.percentile(trdata, [2.5, 97.5])
@@ -38,7 +38,7 @@ plt.xticks(np.arange(N_labels) + 0.5)
 ax.set_xticklabels(xlabels)
 ax.tick_params(axis='both', which='major', labelsize=16)
 
-ax.set_xlabel('Время обслуживание обслуживания заявки, мкс', fontsize=24)
+ax.set_xlabel('Время обслуживания заявки, мкс', fontsize=24)
 ax.set_ylabel('Вероятность', fontsize=24)
 
 fig.tight_layout()

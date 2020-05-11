@@ -1,4 +1,60 @@
-\chapter{Пример приложения}\label{sec:app:1}
+\chapter{Псевдокод алгоритмов работы с мультиплексором событий в разделяемой памяти}\label{sec:app:1}
+
+\begin{algorithm}[!h]
+\caption{Псевдокод процедуры получения оповещений в мультиплексоре событий}
+\label{appendix91:ReceiverCode}
+\begin{lstlisting}[frame=tlrb]
+void MutliplexerServer::handle_signals() {
+	// Шаг 1. Если в futex записан 0, значит, нет оповещений для обработки. Тогда процесс переходит в состояние сна.
+	m_mux->wait();
+	// Шаг 2. Атомарно получить актуальное значение futex и установить вместо него 0.
+	int32_t futex = atomic_exchange(&m_futex, 0);
+	// Шаг 3. Подсчитать количество установленных битов в числе, чтобы не выполнять линейное сканирование всех 32 битов.
+	uint8_t cnt = popcnt(futex);
+	for (uint8_t i = 0; i < cnt; i++) {
+		// Шаг 4. Для каждого бита futex проверить соответствующие ему сигнальные числа.
+		uint8_t f = get_unset_lsb(&futex);
+		// Шаг 5. Атомарно получить значение сигнального числа и записать в него 0.
+		int64_t signal = atomic_exchange(&m_signal[f], 0);
+		uint8_t nsignals = popcntl(signal);
+		// Шаг 6. Для каждого найденного сигнала запустить его обработку.
+		for (uint8_t j = 0; j < nsignals; j++) {
+			uint8_t s = get_unset_lsb(&signal);
+			this->handle_signal(i * 64 + s);
+		}
+	}
+}
+
+// Выполняет обработку соединения, которому ранее был выдан номер id
+void MultiplexerServer::handle_signal(Signal id);
+
+// Возвращает количество выставленных битов в числе
+uint8_t popcnt(int32_t value);
+uint8_t popcntl(int64_t value);
+
+// Сбрасывает младший бит числа и возвращает его позицию.
+uint8_t get_unset_lsb(uint32_t & value);
+uint8_t get_unset_lsb(uint64_t & value);
+\end{lstlisting}
+\end{algorithm}
+
+\begin{algorithm}[!h]
+\caption{Псевдокод процедуры оповещения процесса}
+\label{appendix91:SignalCode}
+\begin{lstlisting}[frame=tlrb]
+void Multiplexer::notify(Signal id) {
+	// Шаг 1. Выставить нужный бит в одном из сигнальных чисел в массиве. Число находится как результат деления номера соединения на 64, т.е. число от 0 до 31, позиция бита как остаток от деления номера соединения на 64.
+	m_signal[id / Multiplexer::c_signals_per_chunk].fetch_or(1 << id % Multiplexer::c_signals_per_chunk);
+    // Шаг 2. Выставить бит futex, соответствующий сигнальному числу. Позиция нужного бита находится как результат деления нмоера соединения на 64, т.е. число от 0 до 31.
+	uint32_t futex = m_futex.fetch_or(1 << id / Multiplexer::c_signals_per_chunk);
+	if (!futex) {
+		// Шаг 3. Если предыдущее значение futex было 0, то попытаться разбудить один процесс, спящий на futex, системным вызовом futex.
+		this->wakeup();
+	}
+}
+\end{lstlisting}
+\end{algorithm}
+
 %
 %В приложениях рисунки, таблицы и другие подобные элементы нумеруются по приложениям с соответствующим префиксом. Проверим это.
 %
@@ -69,7 +125,7 @@
 %    \item десятый элемент.
 %\end{enumerate}
 %
-\chapter{Еще один пример приложения с неимоверно длиннющим названием для тестирования переносов}\label{sec:app:2}
+%\chapter{Еще один пример приложения с неимоверно длиннющим названием для тестирования переносов}\label{sec:app:2}
 %
 %Проверим на примере таблиц, что нумерация в приложениях~--- по приложениям.
 %Таблица~\ref{tab3:apx2} должна иметь номер Б.1.
@@ -86,7 +142,7 @@
 %\end{tabularx}
 %\end{table}
 %
-\chapter{Пример огромного листинга}
+%\chapter{Пример огромного листинга}
 %
 %\begin{lstlisting}[caption={Пример большого листинга},label={lstX}]
 %import java.util.*;

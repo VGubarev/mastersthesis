@@ -348,13 +348,15 @@
 \lstset{
     language=C++,
     extendedchars=\true,
+    inputencoding=utf-8,
     tabsize=4,
     keywordstyle=\color{darkblue},
     commentstyle=\color{gray},
     stringstyle=\color{darkgreen},
     breaklines=true,
     showstringspaces=false,
-    basicstyle=\small\ttfamily
+    basicstyle=\small\ttfamily,
+	keepspaces=true
 }
 
 %% Все флоаты нумеруем глобально. Формулы - тоже.
@@ -1157,7 +1159,7 @@
         \providecommand{\@strings@DegreeName@en}{Master}
     }{
         \ifstrequal{#1}{Бакалавр}{
-            \providecommand{\thespecialization@ru}{Математические модели и алгоритмы в разработке программного обеспечения}
+            \providecommand{\thespecialization@ru}{Математически`е модели и алгоритмы в разработке программного обеспечения}
             \providecommand{\thespecialty@ru}{01.03.02~Прикладная математика и информатика}
             \providecommand{\thespecialization@en}{Mathematical models and algorithms in software engineering}
             \providecommand{\thespecialty@en}{01.03.02~Applied mathematics and informatics}
