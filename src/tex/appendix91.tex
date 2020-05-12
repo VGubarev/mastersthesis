@@ -1,7 +1,7 @@
 \chapter{Псевдокод алгоритмов работы с мультиплексором событий в разделяемой памяти}\label{sec:app:1}
 
 \begin{algorithm}[!h]
-\caption{Псевдокод процедуры получения оповещений в мультиплексоре событий}
+\caption{Псевдокод процедуры получения оповещений из мультиплексора событий в разделяемой памяти}
 \label{appendix91:ReceiverCode}
 \begin{lstlisting}[frame=tlrb]
 void MutliplexerServer::handle_signals() {
@@ -39,7 +39,7 @@ uint8_t get_unset_lsb(uint64_t & value);
 \end{algorithm}
 
 \begin{algorithm}[!h]
-\caption{Псевдокод процедуры оповещения процесса}
+\caption{Псевдокод процедуры оповещения процесса через мультиплексор событий в разделяемой памяти}
 \label{appendix91:SignalCode}
 \begin{lstlisting}[frame=tlrb]
 void Multiplexer::notify(Signal id) {

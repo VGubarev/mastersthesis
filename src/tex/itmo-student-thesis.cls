@@ -246,7 +246,7 @@
 \DefineBibliographyExtras{russian}{\protected\def\bibrangedash{\textendash\penalty\hyphenpenalty}}
 
 % Это ставит сначала русские, потом иностранные источники
-
+%
 \DeclareSourcemap{
     \maps[datatype=bibtex]{
         \map{
@@ -259,6 +259,42 @@
          }
     }
 }
+
+\DefineBibliographyExtras{english}{%
+  \protected\def\mkbibdatelong#1#2#3{%
+    \iffieldundef{#3}
+      {}
+      {\stripzeros{\thefield{#3}}%
+       \iffieldundef{#2}{}{\nobreakspace}}%
+    \iffieldundef{#2}
+      {}
+      {\mkbibmonth{\thefield{#2}}%
+       \iffieldundef{#1}{}{\space}}%
+    \iffieldbibstring{#1}
+      {\bibstring{\thefield{#1}}}
+      {\dateeraprintpre{#1}\stripzeros{\thefield{#1}}}}%
+  \protected\def\mkbibdateshort#1#2#3{%
+    \iffieldundef{#3}
+      {}
+      {\mkdayzeros{\thefield{#3}}%
+       \iffieldundef{#2}{}{\mbox{.}}}%
+    \iffieldundef{#2}
+      {}
+      {\mkmonthzeros{\thefield{#2}}%
+       \iffieldundef{#1}{}{\mbox{.}}}%
+    \iffieldbibstring{#1}
+      {\bibstring{\thefield{#1}}}
+      {\dateeraprintpre{#1}\mkyearzeros{\thefield{#1}}}}%
+}
+
+\DefineBibliographyStrings{english}{
+  urlseen = {дата обращения: } 
+}
+\DefineBibliographyStrings{russian}{
+  urlseen = {дата обращения: } 
+} 
+
+\DeclareFieldFormat{urldate}{(\bibstring{urlseen}\space#1)}
 
 % Добавляем чей-то драйвер от online, чтобы "электронный ресурс" отражался по ГОСТу.
 
