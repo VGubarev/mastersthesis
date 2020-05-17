@@ -9,8 +9,8 @@ from scipy import stats
 # tbctf 6dba0952-8a1f-11ea-8d80-4fe9d50ff731-2/ -k route 'protocol_out_market_data:best_price,protocol_in_market_data:best_price' -o -k route 'protocol_out_order_entry:order,tr_fw:received_order_add' --no_protocol_translation -k layer trees -u us | grep duration | sed -En 's/^.*duration ([0-9]+) µs/\1/p' > raw_numbers
 
 # example data
-enginedata = genfromtxt("data/lf/se_latency")
-enginedata = np.append(enginedata, genfromtxt("data/hsha/se_latency"))
+# enginedata = genfromtxt("data/lf/se_latency")
+enginedata = genfromtxt("data/hsha/se_latency")
 enginedata = np.append(enginedata, genfromtxt("data/tcp/se_latency"))
 enginedata = np.append(enginedata, genfromtxt("data/spin/se_latency"))
 enginedata = np.append(enginedata, genfromtxt("data/pure_tcp/se_latency"))

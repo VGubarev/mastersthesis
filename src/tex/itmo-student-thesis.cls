@@ -679,6 +679,13 @@
 
 %% Контентные команды со значениями по умолчанию
 
+%%% \engabs
+
+\newcommand{\theengabs@ru}{ }
+\newcommand{\theengabs@en}{ }
+\newcommand{\theengabs}{\@iflfe{\theengabs@en}{\theengabs@ru}}
+\newcommand{\engabs}[1]{\@iflfe{\renewcommand{\theengabs@en}{#1}}{\renewcommand{\theengabs@ru}{#1}}}
+
 %%% \university
 
 \newcommand{\theuniversity@ru}{{\small\bfseries Министерство науки и высшего образования Российской Федерации\par
@@ -945,7 +952,7 @@
 \newcommand{\@strings@yearend}{\@iflfe{\@strings@yearend@en}{\@strings@yearend@ru}}
 
 \newcommand{\@strings@Student@en}{Student}
-\newcommand{\@strings@Student@ru}{Студент}
+\newcommand{\@strings@Student@ru}{Обучающийся}
 \newcommand{\@strings@Student}{\@iflfe{\@strings@Student@en}{\@strings@Student@ru}}
 
 \newcommand{\@strings@Group@en}{Group}
@@ -953,7 +960,7 @@
 \newcommand{\@strings@Group}{\@iflfe{\@strings@Group@en}{\@strings@Group@ru}}
 
 \newcommand{\@strings@FacultyOf@en}{Faculty of}
-\newcommand{\@strings@FacultyOf@ru}{Факультет}
+\newcommand{\@strings@FacultyOf@ru}{Факультет/институт/кластер}
 \newcommand{\@strings@FacultyOf}{\@iflfe{\@strings@FacultyOf@en}{\@strings@FacultyOf@ru}}
 
 \newcommand{\@strings@SubjectAreaProgramMajor@en}{Subject area, program/major}
@@ -1083,7 +1090,11 @@
 %%% Локализуемый шаблон титульной страницы
 \newcommand{\typeoutTitlePage}{\begin{titlepage}
     \banhyphens
-    \begin{center}\theuniversity\end{center}
+    \begin{center}
+    \small\bfseries Министерство науки и высшего образования Российской Федерации\par
+    \MakeUppercase{\scriptsize федеральное государственное автономное образовательное учреждение высшего образования}\par
+    \begin{singlespace}{''Национальный исследовательский университет ИТМО``}\end{singlespace}
+    \end{center}
     \vspace{0cm plus 0.66fill minus 0cm}
     {\centering\bfseries\MakeUppercase{\@strings@ThesisName}\par}
     \vspace{0cm plus 0.66fill minus 0cm}
@@ -1091,22 +1102,24 @@
     \vspace{0cm plus 1fill minus 0cm}
     {\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.5}
     \noindent\begin{tabularx}{\textwidth}{Xl}
-    & \@strings@Author: \theauthor \hfilll \signatureplace \\
-    & \@strings@SubjectArea:\;
+    & \@strings@Author~\theauthor \hfilll \signatureplace \\
+    & \@strings@SubjectArea\;
        \begin{minipage}[t]{0.4\textwidth}\begin{flushleft}\thespecialty\end{flushleft}\end{minipage} \\
-    & \@strings@DegreeLevel: \@strings@DegreeName \\
-    & \@strings@ThesisSupervisor: \thesupervisorshort, \thesupervisordegree~ \hfilll \signatureplace \\
-    & \textbf{\@strings@ApprovedForDefense} \\
-    & \@strings@HeadOfProgram\ \theprogramhead, \theprogramheaddegree~ \hfilll \signatureplace \\
+    & \@strings@DegreeLevel~\@strings@DegreeName \\
+    & \@strings@ThesisSupervisor~\thesupervisorshort, \thesupervisordegree~ \hfilll \signatureplace \\
+%    & \textbf{\@strings@ApprovedForDefense} \\
+%    & \@strings@HeadOfProgram\ \theprogramhead, \theprogramheaddegree~ \hfilll \signatureplace \\
     \end{tabularx}\par}
-    \begin{flushright}\unknowndate\end{flushright}
+%    \begin{flushright}\unknowndate\end{flushright}
     \vspace{0cm plus 1fill minus 0cm}
     \begin{center}\thecity, \theyear\@strings@yearend\end{center}
 \end{titlepage}\begin{titlepage}
     \banhyphens
-    \noindent\@strings@Student~\theauthorshort\;\hfilll \@strings@Group~\thestudygroup\; \@strings@FacultyOf~\thefaculty\par\bigskip\par
+    \noindent\@strings@Student~\theauthorshort\par
+    %\;\hfilll \@strings@Group~\thestudygroup\; \@strings@FacultyOf~\thefaculty\par\bigskip\par
+    \noindent\@strings@Group~\thestudygroup\;\@strings@FacultyOf~\thefaculty\par\bigskip\par
     \noindent\@strings@SubjectAreaProgramMajor\par
-    \noindent\thespecialization \par\bigskip\par
+    \noindent\thespecialization, Интеллектуальные системы \par\bigskip\par
     \displayconsultants\bigskip\par\bigskip\par
     \noindent\@strings@ThesisReceived~\unknowndate\par\bigskip\par
     \noindent\@strings@OriginalityOfThesis~\uhspace{5ex}\%\par\bigskip\par
@@ -1131,14 +1144,17 @@
     \begin{center}\bfseries{\normalsize\@strings@OBJECTIVES@first}\\\@strings@OBJECTIVES@second\end{center}
     \bigskip
     \begingroup\banhyphens
-    \noindent \textbf{\@strings@Student}~\theauthorshort\;\hfilll \textbf{\@strings@Group}~\thestudygroup\; \textbf{\@strings@FacultyOf}~\thefaculty\;\par
+%    \noindent \textbf{\@strings@Student}~\theauthorshort\;\hfilll \textbf{\@strings@Group}~\thestudygroup\; \textbf{\@strings@FacultyOf}~\thefaculty\;\par
+    \noindent \textbf{\@strings@Student}~\theauthorshort\par
+    \noindent\textbf{\@strings@Group}~\thestudygroup\; \textbf{\@strings@FacultyOf}~\thefaculty\;\par
+    \noindent \textbf{\@strings@DegreeLevel} \@strings@DegreeName\par
+    \noindent \textbf{Направление подготовки} \thespecialty\par
+    \noindent \textbf{\@strings@ProgramMajor~образовательной программы}\\\thespecialization\par
+    \noindent \textbf{Специализация} Интеллектуальные системы\par
+    \noindent \textbf{Тема ВКР} \thetitle\par
     \noindent \textbf{\@strings@ThesisSupervisor}~\thesupervisorshort, \thesupervisordegree, \thesupervisorwork\par
-    \noindent \textbf{1~\@strings@ThesisTitle:} \thetitle\par
-    \noindent \textbf{\@strings@SubjectAreaBig:} \thespecialty\par
-    \noindent \textbf{\@strings@ProgramMajor:} \thespecialization\par
-    \noindent \textbf{\@strings@DegreeLevel:} \@strings@DegreeName\par
     \endgroup
-    \noindent \textbf{2~\@strings@DeadlineForSubmission:}     \thefinishdate     \par
+    \noindent \textbf{2~\@strings@DeadlineForSubmission}     \thefinishdate     \par
     \noindent \textbf{3~\@strings@RequirementsAndPremise}\par \thetechnicalspec  \par\pagebreak[3]
     \noindent \textbf{4~\@strings@ContentOfTheThesis}    \par \theplannedcontents\par\pagebreak[3]
     \noindent \textbf{5~\@strings@ListOfGraphic}         \par \theplannedgraphics\par\pagebreak[3]
@@ -1146,8 +1162,7 @@
     \noindent \textbf{7~\@strings@ObjectivesIssuedOn}         \thestartdate      \par\bigskip\par
     \noindent\begingroup\renewcommand{\arraystretch}{1.5}\begin{tabular}{ll}
         \@strings@ThesisSupervisorLong & \signatureplace \\
-        \@strings@ObjectivesAssumed    & \signatureplace \\
-        & \thestartdate
+        \@strings@ObjectivesAssumed    & \signatureplace \thestartdate \\
     \end{tabular}\endgroup
 \end{small}
 \end{titlepage}}
@@ -1159,9 +1174,9 @@
     \begin{small}
     {\centering\bfseries\@strings@ANNOTATION@second\par}
     \bigskip
-    \noindent\textbf{\@strings@Student:} \theauthor\par
+    \noindent\textbf{\@strings@Student} \theauthor\par
     \noindent\textbf{\@strings@ThesisTitleLong:} \thetitle\par
-    \noindent\textbf{\@strings@NameOfOrganization:} \thedegreehost\par
+    \noindent\textbf{\@strings@NameOfOrganization} \thedegreehost\par
     \bigskip
     {\centering\bfseries\@strings@DescriptionOfThesis\par}
     \bigskip
@@ -1184,13 +1199,19 @@
     \end{small}
 \end{titlepage}}
 
+\newcommand{\typeoutEngAbstract}{
+\begin{titlepage}
+    \theengabs
+\end{titlepage}
+}
+
 %%% Параметр: Бакалавр/Магистр
 \renewcommand{\maketitle}[1]{
     \ifstrequal{#1}{Магистр}{
         \providecommand{\thespecialization@ru}{Информационно-вычислительные системы}
         \providecommand{\thespecialty@ru}{09.04.04~Программная инженерия}
         \providecommand{\thespecialization@en}{Technologies of software engineering}
-        \providecommand{\thespecialty@en}{01.04.02~Applied mathematics and informatics}
+        \providecommand{\the@en}{01.04.02~Applied mathematics and informatics}
         \providecommand{\@strings@DegreeName@ru}{Магистр}
         \providecommand{\@strings@DegreeName@en}{Master}
     }{
@@ -1213,6 +1234,9 @@
     \if@shouldmakespecification@ru\begin{otherlanguage}{russian}\typeoutSpecification\end{otherlanguage}\fi
     \if@shouldmakeannotation\typeoutAnnotation\fi
     \if@shouldmakeannotation@ru\begin{otherlanguage}{russian}\typeoutAnnotation\end{otherlanguage}\fi
+    
+    \typeoutEngAbstract
+
     \pagenumbering{arabic}
 
     %% Ставим номер страницы сверху по центру

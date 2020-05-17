@@ -8,6 +8,8 @@ import datetime
 from scipy.stats import sem, t
 from scipy import mean
 
+from scipy import stats
+
 f = open('data/spin/46aa2776-91e9-11ea-8090-8a41a21ee60e/order.out', 'r')
 f1 = f.readlines()
 
@@ -59,7 +61,11 @@ print (len(deltas[(deltas >= low2) & (deltas <= high2)])/len(deltas[deltas <= 0.
 print (len(deltas[deltas <= 0.005]))
 print (len(deltas[deltas > 0.005]))
 
-fig, ax = plt.subplots()
-sns.distplot(deltas[deltas <= 0.005], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
-sns.distplot(deltas[deltas > 0.005], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+# fig, ax = plt.subplots()
+# bins = np.arange(0.00005, 0.0002, 0.000005)
+# print (bins)
+# sns.distplot(deltas[deltas <= 0.005], bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC', fit=stats.lognorm)
+# sns.distplot(deltas[deltas > 0.005], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC', fit=stats.lognorm)
+# print (stats.lognorm.fit(deltas[deltas <= 0.005]))
+# print (stats.lognorm.fit(deltas[deltas > 0.005]))
 plt.show()
