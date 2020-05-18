@@ -11,37 +11,29 @@ from scipy import stats
 # example data
 # enginedata = genfromtxt("data/lf/se_latency")
 enginedata = genfromtxt("data/hsha/se_latency")
-enginedata = np.append(enginedata, genfromtxt("data/tcp/se_latency"))
-enginedata = np.append(enginedata, genfromtxt("data/spin/se_latency"))
-enginedata = np.append(enginedata, genfromtxt("data/pure_tcp/se_latency"))
+# enginedata = np.append(enginedata, genfromtxt("data/tcp/se_latency"))
+# enginedata = np.append(enginedata, genfromtxt("data/spin/se_latency"))
+# enginedata = np.append(enginedata, genfromtxt("data/pure_tcp/se_latency"))
 
-mu, sigma = stats.norm.fit(enginedata)
-print ("Engine latency " + str(mu) + " ± " + str(1.96 * sigma))
-print (len(enginedata[(enginedata >= mu - 1.96*sigma) & (enginedata <= mu + 1.96*sigma)])/len(enginedata))
+print (np.quantile(enginedata, [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1]))
 
-low, high = np.percentile(enginedata, [2.5, 97.5])
-mean = low + (high - low) / 2
-delta = mean - low
-print ("Engine latency " + str(mean) + " ± " + str(delta))
-print (len(enginedata[(enginedata >= low) & (enginedata <= high)])/len(enginedata))
+# base_count = 29
+# bins = np.arange(0, base_count, 1)
+# num_bins = bins.size
 
-base_count = 29
-bins = np.arange(0, base_count, 1)
-num_bins = bins.size
+# fig, ax = plt.subplots()
 
-fig, ax = plt.subplots()
+# sns.distplot(np.clip(enginedata, bins[0], bins[-1]), bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
+# xlabels = bins[0:-1].astype(str)
+# xlabels[-1] += "+"
+# plt.xlim([0, num_bins - 1])
+# N_labels = len(xlabels)
+# plt.xticks(np.arange(N_labels) + 0.5)
+# ax.set_xticklabels(xlabels)
+# ax.tick_params(axis='both', which='major', labelsize=16)
 
-sns.distplot(np.clip(enginedata, bins[0], bins[-1]), bins=bins, kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC')
-xlabels = bins[0:-1].astype(str)
-xlabels[-1] += "+"
-plt.xlim([0, num_bins - 1])
-N_labels = len(xlabels)
-plt.xticks(np.arange(N_labels) + 0.5)
-ax.set_xticklabels(xlabels)
-ax.tick_params(axis='both', which='major', labelsize=16)
+# ax.set_xlabel('Время обслуживание обслуживания заявки, мкс', fontsize=24)
+# ax.set_ylabel('Вероятность', fontsize=24)
 
-ax.set_xlabel('Время обслуживание обслуживания заявки, мкс', fontsize=24)
-ax.set_ylabel('Вероятность', fontsize=24)
-
-fig.tight_layout()
-plt.show()
+# fig.tight_layout()
+# plt.show()

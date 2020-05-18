@@ -1,7 +1,7 @@
-\chapter{Псевдокод алгоритмов работы с мультиплексором событий в разделяемой памяти}\label{sec:app:1}
+\chapter{Исходный код алгоритмов работы с мультиплексором событий в разделяемой памяти}\label{sec:app:1}
 
 \begin{algorithm}[!h]
-\caption{Псевдокод процедуры получения оповещений из мультиплексора событий в разделяемой памяти}
+\caption{Исходный код процедуры получения оповещений из мультиплексора событий в разделяемой памяти}
 \label{appendix91:ReceiverCode}
 \begin{lstlisting}[frame=tlrb]
 void MutliplexerServer::handle_signals() {
@@ -32,14 +32,58 @@ void MultiplexerServer::handle_signal(Signal id);
 uint8_t popcnt(int32_t value);
 uint8_t popcntl(int64_t value);
 
-// Сбрасывает младший бит числа и возвращает его позицию.
+// Сбрасывает младший бит числа и возвращает позицию этого бита.
 uint8_t get_unset_lsb(uint32_t & value);
 uint8_t get_unset_lsb(uint64_t & value);
 \end{lstlisting}
 \end{algorithm}
 
 \begin{algorithm}[!h]
-\caption{Псевдокод процедуры оповещения процесса через мультиплексор событий в разделяемой памяти}
+\caption{Исходный код процедуры получения оповещений из мультиплексора событий в разделяемой памяти для метода обслуживания соединений ''Лидер/Последователи``}
+\label{appendix91:LFReceiverCode}
+\begin{lstlisting}[frame=tlrb]
+void MutliplexerServer::handle_signals() {
+	// Шаг 1. Если в futex записан 0, значит, нет оповещений для обработки. Тогда процесс переходит в состояние сна.
+	m_mux->wait();
+	int32_t futex = atomic_exchange(&m_futex, 0);
+	std::vector<int32_t> signals;
+	listeners.reserve(Multiplexer::c_signals_per_mux);
+	uint8_t cnt = popcnt(futex);
+	for (uint8_t i = 0; i < cnt; i++) {
+		uint8_t f = get_unset_lsb(&futex);
+		int64_t signal = atomic_exchange(&m_signal[f], 0);
+		uint8_t nsignals = popcntl(signal);
+		// Шаг 6. Для каждого найденного сигнала запустить его обработку.
+		for (uint8_t j = 0; j < nsignals; j++) {
+			uint8_t s = get_unset_lsb(&signal);
+			// Для каждого полученного оповещения
+			// отметить соединение как Handling,
+			// либо проигнорировать оповещение
+			if (this->should_handle(i * 64 + s)) {
+				signals.emplace_back(i * 64 + s);
+			}
+		}
+	}
+	
+	// Создать нового лидера, который будет
+	// выполнять процедуру handle_signals следующим
+	m_thread_pool->promote_new_leader();
+	
+	// Непосредственно обслуживание соединений по полученным оповещениям
+	for (int32_t signal : signals) {
+		this->handle_signal(i * 64 + s);
+	}
+}
+
+// Возвращает true, если соединение было Idle, и помечает его Handling
+// Если соединение в состоянии Handling, то переводит его в состояние KeepHandling
+// Возвращает false, если любое другое состояние.
+bool MultiplexerServer::should_handle(Signal id);
+\end{lstlisting}
+\end{algorithm}
+
+\begin{algorithm}[!h]
+\caption{Исходный код процедуры оповещения процесса через мультиплексор событий в разделяемой памяти}
 \label{appendix91:SignalCode}
 \begin{lstlisting}[frame=tlrb]
 void Multiplexer::notify(Signal id) {
@@ -58,7 +102,7 @@ void Multiplexer::notify(Signal id) {
 %
 %В приложениях рисунки, таблицы и другие подобные элементы нумеруются по приложениям с соответствующим префиксом. Проверим это.
 %
-%Листинг~\ref{lst4:apx} должен иметь номер А.1.
+%листинг~\ref{lst4:apx} должен иметь номер А.1.
 %
 %\begin{algorithm}[!h]
 %\caption{Исходный код и флоат \texttt{algorithm}}\label{lst4:apx}
@@ -71,7 +115,7 @@ void Multiplexer::notify(Signal id) {
 %\end{lstlisting}
 %\end{algorithm}
 %
-%Рисунок~\ref{fig2:apx} должен иметь номер A.1.
+%рисунок~\ref{fig2:apx} должен иметь номер A.1.
 %
 %\begin{figure}[!h]
 %\caption{Пример рисунка}\label{fig2:apx}
@@ -85,10 +129,10 @@ void Multiplexer::notify(Signal id) {
 %\end{tikzpicture}
 %\end{figure}
 %
-%Таблица~\ref{tab3:apx} должна иметь номер A.1.
+%таблица~\ref{tab3:apx} должна иметь номер A.1.
 %
 %\begin{table}[!h]
-%\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx}
+%\caption{таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx}
 %\centering
 %\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
 %-- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
@@ -128,10 +172,10 @@ void Multiplexer::notify(Signal id) {
 %\chapter{Еще один пример приложения с неимоверно длиннющим названием для тестирования переносов}\label{sec:app:2}
 %
 %Проверим на примере таблиц, что нумерация в приложениях~--- по приложениям.
-%Таблица~\ref{tab3:apx2} должна иметь номер Б.1.
+%таблица~\ref{tab3:apx2} должна иметь номер Б.1.
 %
 %\begin{table}[!h]
-%\caption{Таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx2}
+%\caption{таблица умножения с помощью \texttt{tabularx} (фрагмент)}\label{tab3:apx2}
 %\centering
 %\begin{tabularx}{\textwidth}{|*{18}{>{\centering\arraybackslash}X|}}\hline
 %-- & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline

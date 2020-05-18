@@ -61,6 +61,20 @@ print (len(deltas[(deltas >= low2) & (deltas <= high2)])/len(deltas[deltas <= 0.
 print (len(deltas[deltas <= 0.005]))
 print (len(deltas[deltas > 0.005]))
 
+print (np.quantile(deltas[deltas <= 0.005], [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1]))
+print (np.quantile(deltas[deltas > 0.005], [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1]))
+# print (len(np.quantile(deltas[deltas <= 0.005], [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1])))
+# " & {0} & {1} & {2} & {3} & {4} & {5} & {6} \\ \hline" .format(np.quantile(deltas[deltas <= 0.005], [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1]))
+
+# print (
+# "\begin{table}[]\
+# \begin{tabular}{|l|l|l|l|l|l|l|l|}\
+# \hline\
+# Процентиль & min & 50\% & 80\% & 90\% & 95\% & 99\% & max \\ \hline\
+#  & {} & {} & {} & {} & {} & {} & {} \\ \hline\
+# \end{tabular}\
+# \end{table}".format(np.percentile(deltas[deltas > 0.005], [0, 0.5, 0.8, 0.9, 0.95, 0.99, 1])))
+
 # fig, ax = plt.subplots()
 # bins = np.arange(0.00005, 0.0002, 0.000005)
 # print (bins)
@@ -68,4 +82,4 @@ print (len(deltas[deltas > 0.005]))
 # sns.distplot(deltas[deltas > 0.005], kde=False, norm_hist=True, hist_kws={'edgecolor':'black'}, color='#3782CC', fit=stats.lognorm)
 # print (stats.lognorm.fit(deltas[deltas <= 0.005]))
 # print (stats.lognorm.fit(deltas[deltas > 0.005]))
-plt.show()
+# plt.show()
