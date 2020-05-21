@@ -1,0 +1,50 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 7) {};
+		\node [style=none] (1) at (0, 0) {};
+		\node [style=none] (2) at (3, 0) {};
+		\node [style=none] (3) at (3, 7) {};
+		\node [style=none] (4) at (12, 7) {};
+		\node [style=none] (5) at (12, 0) {};
+		\node [style=none] (6) at (15, 0) {};
+		\node [style=none] (7) at (15, 7) {};
+		\node [style=none] (8) at (6, 4.25) {};
+		\node [style=none] (9) at (9, 4.25) {};
+		\node [style=none] (10) at (9, 2.75) {};
+		\node [style=none] (11) at (6, 2.75) {};
+		\node [style=none] (12) at (3, 5.75) {};
+		\node [style=none] (13) at (3, 4.25) {};
+		\node [style=none] (14) at (0, 5.75) {};
+		\node [style=none] (15) at (0, 4.25) {};
+		\node [style=none] (16) at (12, 2.5) {};
+		\node [style=none] (17) at (12, 1) {};
+		\node [style=none] (18) at (15, 1) {};
+		\node [style=none] (19) at (15, 2.5) {};
+		\node [style=none, text width=3cm, align=center] (20) at (1.5, -2) {Адресное пространство процесса №1};
+		\node [style=none, text width=3cm, align=center] (21) at (13.5, -2) {Адресное пространство процесса №2};
+		\node [style=none, text width=4cm, align=center] (22) at (7.5, 0.5) {Сегмент\\разделяемой\\памяти};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (0.center) to (3.center);
+		\draw (3.center) to (2.center);
+		\draw (2.center) to (1.center);
+		\draw (1.center) to (0.center);
+		\draw (4.center) to (7.center);
+		\draw (7.center) to (6.center);
+		\draw (6.center) to (5.center);
+		\draw (5.center) to (4.center);
+		\draw (8.center) to (11.center);
+		\draw (11.center) to (10.center);
+		\draw (10.center) to (9.center);
+		\draw (9.center) to (8.center);
+		\draw [style=Dashed] (8.center) to (12.center);
+		\draw [style=Dashed] (11.center) to (13.center);
+		\draw [style=Dashed] (13.center) to (15.center);
+		\draw [style=Dashed] (15.center) to (14.center);
+		\draw [style=Dashed] (14.center) to (12.center);
+		\draw [style=Dashed] (9.center) to (16.center);
+		\draw [style=Dashed] (10.center) to (17.center);
+		\draw [style=Dashed] (17.center) to (18.center);
+		\draw [style=Dashed] (16.center) to (19.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

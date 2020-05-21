@@ -25,6 +25,8 @@ void MutliplexerServer::handle_signals() {
 	}
 }
 
+// Ожидание новых оповещений на futex в режиме сна или методом активного опроса мультиплексора.
+void Multiplexer::wait();
 // Выполняет обработку соединения, которому ранее был выдан номер id
 void MultiplexerServer::handle_signal(Signal id);
 
@@ -82,23 +84,6 @@ bool MultiplexerServer::should_handle(Signal id);
 \end{lstlisting}
 \end{algorithm}
 
-\begin{algorithm}[!h]
-\caption{Исходный код процедуры оповещения процесса через мультиплексор событий в разделяемой памяти}
-\label{appendix91:SignalCode}
-\begin{lstlisting}[frame=tlrb]
-void Multiplexer::notify(Signal id) {
-	// Шаг 1. Выставить нужный бит в одном из сигнальных чисел в массиве. Число находится как результат деления номера соединения на 64, т.е. число от 0 до 31, позиция бита как остаток от деления номера соединения на 64.
-	m_signal[id / Multiplexer::c_signals_per_chunk].fetch_or(1 << id % Multiplexer::c_signals_per_chunk);
-    // Шаг 2. Выставить бит futex, соответствующий сигнальному числу. Позиция нужного бита находится как результат деления нмоера соединения на 64, т.е. число от 0 до 31.
-	uint32_t futex = m_futex.fetch_or(1 << id / Multiplexer::c_signals_per_chunk);
-	if (!futex) {
-		// Шаг 3. Если предыдущее значение futex было 0, то попытаться разбудить один процесс, спящий на futex, системным вызовом futex.
-		this->wakeup();
-	}
-}
-\end{lstlisting}
-\end{algorithm}
-
 %
 %В приложениях рисунки, таблицы и другие подобные элементы нумеруются по приложениям с соответствующим префиксом. Проверим это.
 %
@@ -139,7 +124,7 @@ void Multiplexer::notify(Signal id) {
 %1  & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 & 17 \\\hline
 %2  & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 & 26 & 28 & 30 & 32 & 34 \\\hline
 %3  & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 & 39 & 42 & 45 & 48 & 51 \\\hline
-%4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
+%4  & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & элементов40 & 44 & 48 & 52 & 56 & 60 & 64 & 68 \\\hline
 %\end{tabularx}
 %\end{table}
 %

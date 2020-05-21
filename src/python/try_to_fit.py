@@ -20,7 +20,7 @@ def gauss(x,mu,sigma,A):
 def trimodal(x,mu1,sigma1,A1,mu2,sigma2,A2,mu3,sigma3,A3):
     return gauss(x,mu1,sigma1,A1)+gauss(x,mu2,sigma2,A2)+gauss(x,mu3,sigma3,A3)
 
-expected=(10,1,91000,13,1,152000,16,1,65000)
+expected=(10,1.5,91000,13,1,152000,16,1,65000)
 params,cov=curve_fit(trimodal,x,y,expected)
 sigma=sqrt(diag(cov))
 plot(x,trimodal(x,*params),color='red',lw=3,label='model')

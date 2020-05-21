@@ -45,12 +45,9 @@ sns.distplot(np.clip(hsha1data, bins[0], bins[-1]), bins=bins, kde=False, hist_k
 # sns.distplot(np.clip(hsha2data, bins[0], bins[-1]), bins=bins, kde=False, hist_kws={'edgecolor':'black'}, color='#FF0000', label='Процесс-обработчик → Процесс-шлюз')
 
 # Good fit
-data = stats.norm.rvs(loc=10.78,scale=0.96,size=2*120000)
-data = np.append(data, stats.norm.rvs(loc=13.77,scale=0.7,size=2*157000))
-data = np.append(data, stats.norm.rvs(loc=16.4,scale=1.07,size=2*95000))
-# data = stats.norm.rvs(loc=10.78,scale=1.3,size=2*120000)
-# data = np.append(data, stats.norm.rvs(loc=13.77,scale=0.7,size=2*157000))
-# data = np.append(data, stats.norm.rvs(loc=16.4,scale=1.07,size=2*95000))
+data = stats.norm.rvs(loc=10.78,scale=1.0,size=260000)
+data = np.append(data, stats.norm.rvs(loc=13.77,scale=0.7,size=330000))
+data = np.append(data, stats.norm.rvs(loc=16.4,scale=1.07,size=190000))
 sns.distplot(np.clip(data, bins[0], bins[-1]), bins=bins, kde=False, hist_kws={'edgecolor':'black'}, color='#FF0000', label='simulated')
 
 
