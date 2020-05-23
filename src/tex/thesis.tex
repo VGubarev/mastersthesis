@@ -34,8 +34,9 @@
 
 \usetikzlibrary{arrows}
 \usetikzlibrary{positioning}
-
-\usepackage[final]{pdfpages}
+%
+%
+\usepackage[hidelinks]{hyperref}
 
 %% Указываем файл с библиографией.
 \addbibresource{master-thesis.bib}
@@ -46,17 +47,15 @@
 
 \tableofcontents
 
-%\include{preface}
+\include{preface}
 
 \include{chapter11}
 
-%\include{chapter21}
+\include{chapter31}
 
-%\include{chapter31}
+\include{chapter41}
 
-%\include{chapter41}
-
-%\include{conclusion}
+\include{conclusion}
 
 \printmainbibliography
 
@@ -64,6 +63,6 @@
 %% \startappendices из старого стилевика будет делать то же самое
 \appendix
 
-%\include{appendix91}
+\include{appendix91}
 
 \end{document}

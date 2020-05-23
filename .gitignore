@@ -8,3 +8,4 @@ data/
 *.toc
 *.tct
 *.out
+*.synctex.gz

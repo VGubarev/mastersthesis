@@ -500,7 +500,9 @@
 \@countsourceswhere{check=bibch@foreignsourcesveryold}{c@foreignsourcesveryold}%
 \@countsourceswhere{type=online}{c@internetsources}}
 
-\newcommand{\printannobibliography}{\renewcommand*{\bibfont}{\small}\printbibliography[heading=none]}
+\newcommand{\@killhyperrefissue}{\renewbibmacro{pageref}{}\let\blx@anchor\relax}
+
+\newcommand{\printannobibliography}{\begingroup\@killhyperrefissue\renewcommand*{\bibfont}{\small}\printbibliography[heading=none]\endgroup}
 
 %% Подсчет источников различных категорий. Это следующие команды:
 %%   \relatedworksourcecount   - число источников, использованных в обзоре
@@ -534,7 +536,7 @@
 %%% Считаем в счетчик #2 число ссылок, удовлетворяющих фильтру #1
 \newcommand{\@countsourceswhere}[2]{%
 \setcounter{@bibliocounter}{0}%
-\printbibliography[env=@fillbibliocounter,heading=reallynone,#1]%
+\begingroup\@killhyperrefissue\printbibliography[env=@fillbibliocounter,heading=reallynone,#1]\endgroup%
 \setcounter{#2}{\arabic{@bibliocounter}}}
 
 %%% Определяем команды через значения счетчиков
@@ -567,6 +569,7 @@
 
 \RequirePackage{titlesec}
 \RequirePackage{titletoc}
+\RequirePackage[hidelinks]{hyperref}
 
 \setcounter{secnumdepth}{3}
 \titleformat{\chapter}[block]{\normalsize\bfseries\center}{\@chaptername~\thechapter.~}%

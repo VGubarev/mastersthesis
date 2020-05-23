@@ -32,18 +32,19 @@ langid = {english}
 @mastersthesis{LTTngThesis,
 title = {Исследование и разработка методов трассировки событий в параллельных и распределенных системах},
 author = {Анастасия Олеговна Кузичкина},
-type = {Дипломная работа},
+type = {Выпускная квалификационная работа},
 year = {2017},
 address = {Факультет ПИиКТ},
 institution = {Университет ИТМО},
 langid = {russian}
 }
 
+
 @mastersthesis{IPCInterVirtualMachineShmem,
 title = {Interprocess Communication Mechanisms With Inter-Virtual Machine Shared Memory},
 author = {Ke Xiaodi},
 year = {2011},
-type = {Master's dissertation},
+type = {Master's thesis},
 address = {Department of Computing Science},
 institution = {University of Alberta},
 doi = {https://doi.org/10.7939/R3PH6H},
@@ -71,15 +72,13 @@ urldate = {2020-03-25},
 langid = {english}
 }
 
-@inproceedings{GubarevFutex,
-title={Реализация методов эффективного взаимодействия процессов в распределенных системах},
-author={Владимир Юрьевич Губарев},
-publisher={Университет ИТМО},
+@unpublished{GubarevFutexConference,
+title= {Реализация методов эффективного взаимодействия процессов в распределенных системах},
+author = {Владимир Юрьевич Губарев},
 year = {2020},
-media = {электронный ресурс},
-langid = {russian},
-booktitle={Сборник тезисов докладов конгресса молодых ученых. Электронное издание.},
-city = {СПб}
+month = {04},
+note= {IX Конгресс молодых ученых (ОНЛАЙН ФОРМАТ)},
+langid = {russian}
 }
 
 @article{schmidt1996acceptor,
@@ -113,8 +112,7 @@ year = {2010},
 isbn = {9781605589640},
 publisher = {Association for Computing Machinery},
 address = {New York, NY, USA},
-url = {https://doi.org/10.1145/1808954.1808964},
-doi = {10.1145/1808954.1808964},
+doi = {https://doi.org/10.1145/1808954.1808964},
 booktitle = {Proceedings of the 3rd International Workshop on Multicore Software Engineering},
 pages = {40–47},
 numpages = {8},
@@ -165,8 +163,8 @@ langid = {english}
 
 @inproceedings{8526899,
 author={K. C. {Hale} and P. A. {Dinda}},
-booktitle={2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS)}, 
-title={An Evaluation of Asynchronous Software Events on Modern Hardware}, 
+booktitle={2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS)},
+title={An Evaluation of Asynchronous Software Events on Modern Hardware},
 year={2018},
 volume={},
 number={},
@@ -184,8 +182,8 @@ langid = {english}
 
 @INPROCEEDINGS{6298185,
 author={R. {Strebelow} and M. {Tribastone} and C. {Prehofer}},
-booktitle={2012 IEEE 20th International Symposium on Modeling, Analysis and Simulation of Computer and Telecommunication Systems}, 
-title={Performance Modeling of Design Patterns for Distributed Computation}, 
+booktitle={2012 IEEE 20th International Symposium on Modeling, Analysis and Simulation of Computer and Telecommunication Systems},
+title={Performance Modeling of Design Patterns for Distributed Computation},
 year={2012},
 volume={},
 number={},
@@ -195,7 +193,6 @@ pages={251-258}
 
 @book{POSA2,
 author = {Schmidt, Douglas C.},
-description = {Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects: Douglas Schmidt,Michael Stal,Hans Rohnert,Frank Buschmann: 9780471606956: Amazon.com: Books},
 isbn = {0471606952},
 publisher = {Wiley},
 title = {Pattern-Oriented Software Architecture Volume 2: Patterns for Concurrent and Networked Objects},
@@ -204,26 +201,25 @@ pages = 633,
 langid = {english}
 }
 
-
-@article{Wang2019TZCEI,
-  title={TZC: Efficient Inter-Process Communication for Robotics Middleware with Partial Serialization},
-  author={Yu-ping Wang and Wende Tan and Xu-Qiang Hu and Dinesh Manocha and Shi-Min Hu},
-  journal={TBD: FOR REVIEW. 2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  year={2019},
-  pages={7805-7812},
-  langid = {english}
+@online{IntelManual,
+author = {Intel Corporation},
+title = {Intel® 64 and IA-32 Architectures Software Developer’s Manual Volume 3B: System Programming Guide, Part 2},
+year = 2016,
+url = {https://www.intel.ru/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3b-part-2-manual.pdf},
+urldate = {2020-02-10},
+langid = {english}
 }
 
-@INPROCEEDINGS{7790679,
-  author={A. {Alexandrescu} and A. {Stan} and N. {Botezatu} and S. {Caraiman}},
-  booktitle={TBD: FOR REVIEW 2016 20th International Conference on System Theory, Control and Computing (ICSTCC)}, 
-  title={Real-time inter-process communication in heterogeneous programming environments}, 
-  year={2016},
-  volume={},
-  number={},
-  pages={283-288},
-  langid = {english}}
-  
+@article{Wang2019TZCEI,
+title={TZC: Efficient Inter-Process Communication for Robotics Middleware with Partial Serialization},
+author={Yu-ping Wang and Wende Tan and Xu-Qiang Hu and Dinesh Manocha and Shi-Min Hu},
+journal={2019 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+year={2019},
+pages={7805-7812},
+langid = {english}
+}
+
+
 @InProceedings{10.1007/3-540-44947-7_10,
 author="Blieberger, Johann
 and Burgstaller, Bernd
@@ -243,7 +239,7 @@ langid = {english}
 @article{Ganjaliyev2019,
 title = {Spin-Then-Sleep: A Machine Learning Alternative to Queue-based Spin-then-Block Strategy},
 journal = {International Journal of Advanced Computer Science and Applications},
-doi = {10.14569/IJACSA.2019.0100377},
+doi = {https://doi.org/10.14569/IJACSA.2019.0100377},
 year = {2019},
 publisher = {The Science and Information Organization},
 volume = {10},
@@ -261,4 +257,181 @@ title = {Fuss, Futexes and Furwocks: Fast Userlevel Locking in Linux},
 url = {https://www.kernel.org/doc/ols/2002/ols2002-pages-479-495.pdf},
 urldate = {2020-04-23},
 langid = {english}
+}
+
+
+@thesis{ShMemTransportThesis,
+title = {Reducing the Inter-Process Communication Time on Local Host by Implementing Seamless Socket Like, ''low latency`` Interface Over Shared Memory},
+author = {Gulati, Mauli},
+type = {Master's thesis},
+year = {2009},
+address = {Department of Computer Science \& Engineering},
+institution = {Thapar University},
+langid = {english}
+}
+
+@article{10.1145/2847562,
+author = {Ren, Yi and Liu, Ling and Zhang, Qi and Wu, Qingbo and Guan, Jianbo and Kong, Jinzhu and Dai, Huadong and Shao, Lisong},
+title = {Shared-Memory Optimizations for Inter-Virtual-Machine Communication},
+year = {2016},
+issue_date = {May 2016},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {48}, 
+number = {4},
+issn = {0360-0300},
+doi = {https://doi.org/10.1145/2847562},
+journal = {ACM Comput. Surv.},
+month = feb,
+articleno = {49},
+numpages = {42},
+keywords = {seamless agility, inter-virtual-machine communication, shared memory, multilevel transparency, Residency aware},
+langid = {english}
+}
+
+
+@thesis{GubarevBachelorThesis,
+title = {Разработка и реализация методов эффективного взаимодействия процессов в распределенных системах},
+author = {Владимир Юрьевич Губарев},
+type = {Выпускная квалификационная работа},
+year = {2018},
+address = {Факультет ПИиКТ},
+institution = {Университет ИТМО},
+langid = {russian}
+}
+
+@online{GubarevKMU18,
+title = {Разработка и реализация методов эффективного взаимодействия процессов в распределенных системах},
+author = {Владимир Юрьевич Губарев and Михаил Сергеевич Косяков},
+booktitle = {Сборник тезисов докладов конгресса молодых ученых. Электронное издание.},
+year = {2018},
+url = {http://openbooks.ifmo.ru/ru/file/7292/7292.pdf},
+urldate = {2020-04-22},
+langid = {russian}
+}
+
+@online{GubarevKMU20,
+title={Реализация методов эффективного взаимодействия процессов в распределенных системах},
+author={Владимир Юрьевич Губарев},
+publisher={Университет ИТМО},
+year = {2020},
+media = {электронный ресурс},
+langid = {russian},
+booktitle={Сборник тезисов докладов конгресса молодых ученых. Электронное издание.},
+city = {СПб},
+url = {https://kmu.itmo.ru/file/download/application/9365},
+urldate = {2020-05-23}
+}
+
+@INPROCEEDINGS{5649358,
+author={A. S. {Huang} and E. {Olson} and D. C. {Moore}},
+booktitle={2010 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+title={LCM: Lightweight Communications and Marshalling}, 
+year={2010},
+volume={},
+number={},
+pages={4057-4062},
+langid = {english}
+}
+
+
+@INPROCEEDINGS{7790679,
+author={A. {Alexandrescu} and A. {Stan} and N. {Botezatu} and S. {Caraiman}},
+booktitle={2016 20th International Conference on System Theory, Control and Computing (ICSTCC)},
+title={Real-time inter-process communication in heterogeneous programming environments},
+year={2016},
+volume={},
+number={},
+pages={283-288},
+langid = {english}}
+
+
+@article{FutexesAreTricky,
+author = {Drepper, Ulrich},
+year = {2004},
+month = {06},
+pages = {},
+title = {Futexes Are Tricky},
+url = {https://dept-info.labri.fr/~denis/Enseignement/2008-IR/Articles/01-futex.pdf},
+urldate = {2020-04-23},
+langid = {english}
+}
+
+
+
+
+@INPROCEEDINGS{10.1007/978-3-642-00955-6_7,
+author="Diakhat{\'e}, Fran{\c{c}}ois and Perache, Marc and Namyst, Raymond and Jourdren, Herve",
+editor="C{\'e}sar, Eduardo and Alexander, Michael and Streit, Achim and Tr{\"a}ff, Jesper Larsson and C{\'e}rin, Christophe and Kn{\"u}pfer, Andreas and Kranzlm{\"u}ller, Dieter and Jha, Shantenu",
+title="Efficient Shared Memory Message Passing for Inter-VM Communications",
+booktitle="Euro-Par 2008 Workshops - Parallel Processing",
+year="2009",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="53--62",
+isbn="978-3-642-00955-6",
+langid = {english}
+}
+
+@INPROCEEDINGS{10.1007/11846802_19,
+author="Buntinas, Darius and Mercier, Guillaume and Gropp, William",
+editor="Mohr, Bernd and Tr{\"a}ff, Jesper Larsson and Worringen, Joachim and Dongarra, Jack",
+title="Implementation and Shared-Memory Evaluation of MPICH2 over the Nemesis Communication Subsystem",
+booktitle="Recent Advances in Parallel Virtual Machine and Message Passing Interface",
+year="2006",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="86--95",
+isbn="978-3-540-39112-8",
+langid = {english}
+}  
+
+@INPROCEEDINGS{4100356,
+author={L. {Chai} and A. {Hartono} and D. K. {Panda}},
+booktitle={2006 IEEE International Conference on Cluster Computing}, 
+title={Designing High Performance and Scalable MPI Intra-node Communication Support for Clusters}, 
+year={2006},
+volume={},
+number={},
+pages={1-10},
+langid = {english}}
+
+@INPROCEEDINGS{4663761,
+author={ {Wei Huang} and M. J. {Koop} and D. K. {Panda}},
+booktitle={2008 IEEE International Conference on Cluster Computing}, 
+title={Efficient one-copy MPI shared memory communication in Virtual Machines}, 
+year={2008},
+volume={},
+number={},
+pages={107-115},
+langid = {english}}
+
+@INPROCEEDINGS{4625853,
+author={L. {Chai} and P. {Lai} and H. {Jin} and D. K. {Panda}},
+booktitle={2008 37th International Conference on Parallel Processing}, 
+title={Designing an Efficient Kernel-Level and User-Level Hybrid Approach for MPI Intra-Node Communication on Multi-Core Systems}, 
+year={2008},
+volume={},
+number={},
+pages={222-229},  langid = {english}}
+
+@INPROCEEDINGS{8665755,
+author={S. {Jain} and R. {Kaleem} and M. G. {Balmana} and A. {Langer} and D. {Durnov} and A. {Sannikov} and M. {Garzaran}},
+booktitle={SC18: International Conference for High Performance Computing, Networking, Storage and Analysis}, 
+title={Framework for Scalable Intra-Node Collective Operations using Shared Memory}, 
+year={2018},
+volume={},
+number={},
+pages={374-385}, langid = {english}}
+
+@thesis{HPCInterCoreLinux,
+   author = {Hammar, Andreas},
+   institution = {Uppsala University, Department of Information Technology},
+   school = {Uppsala University, Department of Information Technology},
+   title = {Analysis and Design of High Performance Inter-core Process Communication for Linux},
+   series = {UPTEC IT},
+   ISSN = {1401-5749},
+   number = {14 020},
+   year = {2014},
+   langid = {english}
 }
