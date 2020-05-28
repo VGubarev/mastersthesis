@@ -23,9 +23,9 @@
 		\node [style=none] (20) at (18.5, 8) {};
 		\node [style=none] (21) at (18.5, 9) {};
 		\node [style=none] (22) at (23, 9) {};
-		\node [style=none, text width=3cm, align=center] (23) at (9, 11) {\small{Сообщение}};
-		\node [style=none, text width=5cm, align=center] (24) at (26, 10.75) {\small{Время жизни соединения}};
-		\node [style=none, text width=3cm, align=center] (25) at (9, 6.25) {\small{Сообщение}};
+		\node [style=none, text width=3cm, align=center] (23) at (9.25, 10) {\small{Сообщение}};
+		\node [style=none, text width=5cm, align=center] (24) at (27, 12) {\small{Контроль времени жизни соединения}};
+		\node [style=none, text width=3cm, align=center] (25) at (9.25, 7) {\small{Сообщение}};
 		\node [style=none] (27) at (11.5, 2) {};
 		\node [style=none] (28) at (18.5, 2) {};
 		\node [style=none] (29) at (18.5, 0) {};
@@ -40,8 +40,8 @@
 		\node [style=none] (40) at (12, 5) {};
 		\node [style=none] (41) at (18, 5) {};
 		\node [style=none] (42) at (12, 5) {};
-		\node [style=none, text width=3cm, align=center] (43) at (11.5, 6) {\small{Получение оповещения}};
-		\node [style=none, text width=3cm, align=center] (44) at (18.5, 6) {\small{Оповещение}};
+		\node [style=none, text width=3cm, align=center] (43) at (11.5, 4) {\small{Получение оповещения}};
+		\node [style=none, text width=3cm, align=center] (44) at (18.5, 4) {\small{Оповещение}};
 		\node [style=none] (45) at (10.5, 4.5) {};
 		\node [style=none] (46) at (11.5, 15) {};
 		\node [style=none] (47) at (18.5, 15) {};

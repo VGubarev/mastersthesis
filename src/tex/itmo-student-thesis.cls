@@ -176,7 +176,7 @@
 \addto{\captionsrussian}{%
 \renewcommand{\@iflfe}[2]{#2}%
 \renewcommand*{\figurename}{Рисунок}%
-\renewcommand*{\contentsname}{ОГЛАВЛЕНИЕ}%
+\renewcommand*{\contentsname}{СОДЕРЖАНИЕ}%
 \renewcommand*{\labelenumi}{\asbukx{enumi})}%
 \renewcommand*{\theenumi}{\asbukx{enumi}}%
 \renewcommand*{\@tablecontinuation}[1]{Продолжение таблицы~#1}%
@@ -484,6 +484,7 @@
 \newcommand{\@ifveryold}{\iffieldint{year}{\ifnumless{\thefield{year}}{\@yearminusten}{}{\skipentry}}{}}%
 \newcommand{\@ifrussian}{\iffieldundef{langid}{}{\iffieldequalstr{langid}{russian}{}{\skipentry}}}%
 \newcommand{\@ifforeign}{\iffieldundef{langid}{\skipentry}{\iffieldequalstr{langid}{russian}{\skipentry}{}}}%
+\newcommand{\@ifhasdateaccessed}{\iffieldundef{urlday}{\skipentry}{}}%
 %%% Сами фильтры
 \defbibcheck{bibch@russiansourcesfiveyears}{\@iffiveyears\@ifrussian}%
 \defbibcheck{bibch@russiansourcestenyears}{\@iftenyears\@ifrussian}%
@@ -491,6 +492,7 @@
 \defbibcheck{bibch@foreignsourcesfiveyears}{\@iffiveyears\@ifforeign}%
 \defbibcheck{bibch@foreignsourcestenyears}{\@iftenyears\@ifforeign}%
 \defbibcheck{bibch@foreignsourcesveryold}{\@ifveryold\@ifforeign}%
+\defbibcheck{bibch@dateaccessed}{\@ifhasdateaccessed}%
 \@countsourceswhere{}{citnum}%
 \@countsourceswhere{check=bibch@russiansourcesfiveyears}{c@russiansourcesfiveyears}%
 \@countsourceswhere{check=bibch@russiansourcestenyears}{c@russiansourcestenyears}%
@@ -498,7 +500,7 @@
 \@countsourceswhere{check=bibch@foreignsourcesfiveyears}{c@foreignsourcesfiveyears}%
 \@countsourceswhere{check=bibch@foreignsourcestenyears}{c@foreignsourcestenyears}%
 \@countsourceswhere{check=bibch@foreignsourcesveryold}{c@foreignsourcesveryold}%
-\@countsourceswhere{type=online}{c@internetsources}}
+\@countsourceswhere{check=bibch@dateaccessed}{c@internetsources}}
 
 \newcommand{\@killhyperrefissue}{\renewbibmacro{pageref}{}\let\blx@anchor\relax}
 
@@ -572,14 +574,14 @@
 \RequirePackage[hidelinks]{hyperref}
 
 \setcounter{secnumdepth}{3}
-\titleformat{\chapter}[block]{\normalsize\bfseries\center}{\@chaptername~\thechapter.~}%
+\titleformat{\chapter}[block]{\normalsize\bfseries\center}{\thechapter~}%
 {0pt}{\begin{MakeUppercase}}[\end{MakeUppercase}\thispagestyle{\TheOnlyTruePageStyle}]
 \titlespacing{\chapter}{0pt}{-30pt}{30pt}
-\titleformat{\section}[block]{\normalsize\bfseries}{\thesection.~}{0pt}{}
+\titleformat{\section}[block]{\normalsize\bfseries}{\thesection~}{0pt}{}
 \titlespacing{\section}{0pt}{10pt}{10pt}
-\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection.~}{0pt}{}
+\titleformat{\subsection}[block]{\normalsize\bfseries}{\thesubsection~}{0pt}{}
 \titlespacing{\subsection}{0pt}{10pt}{10pt}
-\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection.~}{0pt}{}
+\titleformat{\subsubsection}[block]{\normalsize\bfseries}{\thesubsubsection~}{0pt}{}
 \titlespacing{\subsubsection}{0pt}{10pt}{10pt}
 
 %% \appendix начинает приложения, которые должны правильно именоваться.
@@ -607,9 +609,9 @@
 %% Приемлемый внешний вид содержания
 
 \contentsmargin{1.8em}
-\newcommand{\chapterW}{4.6em}
-\newcommand{\sectionW}{1.8em}
-\newcommand{\subsectionW}{2.2em}
+\newcommand{\chapterW}{1.2em}
+\newcommand{\sectionW}{2.2em}
+\newcommand{\subsectionW}{2.6em}
 
 \newcommand{\banhyphens}{\hyphenpenalty=10000\exhyphenpenalty=10000{}}
 
@@ -633,19 +635,19 @@
 \titlecontents{chapter}
     [\chapterPrefix]
     {}
-    {\contentslabel[\@chaptername~\thecontentslabel.]{\the\chapterPrefix}}
-    {\hspace*{-\the\chapterPrefix}}
+    {\contentslabel[\thecontentslabel]{\chapterW}}
+    {\hspace*{-\chapterW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{section}
     [\sectionPrefix]
     {}
-    {\contentslabel[\thecontentslabel.]{\sectionW}}
+    {\contentslabel[\thecontentslabel]{\sectionW}}
     {\hspace*{-\sectionW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 \titlecontents{subsection}
     [\subsectionPrefix]
     {}
-    {\contentslabel[\thecontentslabel.]{\subsectionW}~}
+    {\contentslabel[\thecontentslabel]{\subsectionW}~}
     {\hspace*{-\subsectionW}}
     {\titlerule*[0.5pc]{.}\contentspage}
 
@@ -1118,7 +1120,7 @@
     \begin{center}\thecity, \theyear\@strings@yearend\end{center}
 \end{titlepage}\begin{titlepage}
     \banhyphens
-    \noindent\@strings@Student~\theauthorshort\par
+    \noindent\@strings@Student~\theauthor\par
     %\;\hfilll \@strings@Group~\thestudygroup\; \@strings@FacultyOf~\thefaculty\par\bigskip\par
     \noindent\@strings@Group~\thestudygroup\;\@strings@FacultyOf~\thefaculty\par\bigskip\par
     \noindent\@strings@SubjectAreaProgramMajor\par
@@ -1140,7 +1142,8 @@
     \noindent\begin{tabularx}{\textwidth}{Xl}
         & \hfilll \textbf{\@strings@APPROVED} \hfilll\ \\
         & \@strings@HeadOfProgram\\
-        & \theprogramheaddegree\ \theprogramhead\ \signatureplace \\
+%        & \theprogramheaddegree\ \theprogramhead\ \signatureplace \\
+        & \theprogramhead\ \signatureplace \\
         & \unknowndate \\
     \end{tabularx}
     \bigskip
@@ -1155,7 +1158,7 @@
     \noindent \textbf{\@strings@ProgramMajor~образовательной программы}\\\thespecialization\par
     \noindent \textbf{Специализация} Интеллектуальные системы\par
     \noindent \textbf{Тема ВКР} \thetitle\par
-    \noindent \textbf{\@strings@ThesisSupervisor}~\thesupervisorshort, \thesupervisordegree, \thesupervisorwork\par
+    \noindent \textbf{\@strings@ThesisSupervisor}~\thesupervisor, \thedegreehost, \thesupervisorwork, \thesupervisordegree\par
     \endgroup
     \noindent \textbf{2~\@strings@DeadlineForSubmission}     \thefinishdate     \par
     \noindent \textbf{3~\@strings@RequirementsAndPremise}\par \thetechnicalspec  \par\pagebreak[3]
@@ -1195,8 +1198,8 @@
     \noindent9~\@strings@GrantsReceived\par\theresearchfunding\par\pagebreak[3]\vspace{1ex minus 1ex}
     \noindent10~\@strings@ThesisPublications\par\theresearchpublications\par\bigskip
     \noindent\begingroup\renewcommand{\arraystretch}{1.5}\begin{tabular}{lll}
-        \@strings@Student & \theauthorshort & \signatureplace \\
-        \@strings@ThesisSupervisor & \thesupervisorshort &  \signatureplace \\
+        \@strings@Student & \theauthor & \signatureplace \\
+        \@strings@ThesisSupervisor & \thesupervisor &  \signatureplace \\
         \multicolumn{3}{l}{\unknowndate}
     \end{tabular}\endgroup
     \end{small}
@@ -1215,7 +1218,7 @@
         \providecommand{\thespecialty@ru}{09.04.04~Программная инженерия}
         \providecommand{\thespecialization@en}{Technologies of software engineering}
         \providecommand{\the@en}{01.04.02~Applied mathematics and informatics}
-        \providecommand{\@strings@DegreeName@ru}{Магистр}
+        \providecommand{\@strings@DegreeName@ru}{магистр}
         \providecommand{\@strings@DegreeName@en}{Master}
     }{
         \ifstrequal{#1}{Бакалавр}{

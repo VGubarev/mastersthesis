@@ -11,25 +11,25 @@
 		\node [style=none] (11) at (0, 0) {};
 		\node [style=none] (12) at (8, 0) {};
 		\node [style=none] (13) at (2, 0) {};
-		\node [style=Square] (15) at (0.75, 6.25) {Циклическая блокировка};
+		\node [style=Square] (15) at (1, 6.25) {Циклическая блокировка};
 		\node [style=none] (16) at (10, 12) {};
 		\node [style=none] (17) at (10, 0) {};
-		\node [style=Square] (18) at (8.75, 6.25) {Управляющий блок};
+		\node [style=Square] (18) at (9, 6.25) {Управляющий блок};
 		\node [style=none] (19) at (14, 12) {};
 		\node [style=none] (20) at (14, 0) {};
 		\node [style=none] (21) at (16, 12) {};
 		\node [style=none] (22) at (16, 0) {};
 		\node [style=none] (23) at (24, 12) {};
 		\node [style=none] (24) at (24, 0) {};
-		\node [style=Square] (25) at (14.75, 6.25) {Управляющий блок};
-		\node [style=none] (26) at (11.75, 6.25) {Данные};
+		\node [style=Square] (25) at (15, 6.25) {Управляющий блок};
+		\node [style=none] (26) at (12, 6.25) {Данные};
 		\node [style=none] (27) at (20, 6.25) {Данные};
 		\node [style=none] (29) at (4, -2.5) {4096 байт};
 		\node [style=none] (30) at (26, 0) {};
 		\node [style=none] (31) at (26, 12) {};
 		\node [style=none] (32) at (4, 12) {};
 		\node [style=none] (33) at (4, 0) {};
-		\node [style=Square] (34) at (2.75, 6.25) {Состояние очереди};
+		\node [style=Square] (34) at (3, 6.25) {Состояние очереди};
 		\node [style=none] (35) at (8, 13.5) {Начало очереди};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}

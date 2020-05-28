@@ -14,6 +14,7 @@
 		\node [style=none] (11) at (30, 8.25) {};
 		\node [style=none] (12) at (30, 5.25) {};
 		\node [style=none] (13) at (23, 5.25) {};
+		\node [style=none, text width=5cm, align=center] (24) at (25.5, 7.5) {\small{Контроль времени жизни соединения}};
 		\node [style=none, text width=3cm, align=center] (14) at (26.5, 6.75) {Модуль TCP};
 		\node [style=none] (15) at (7, 7.25) {};
 		\node [style=none] (16) at (11.5, 7.25) {};
@@ -23,10 +24,10 @@
 		\node [style=none] (20) at (18.5, 6.25) {};
 		\node [style=none] (21) at (18.5, 7.25) {};
 		\node [style=none] (22) at (23, 7.25) {};
-		\node [style=none, text width=3cm, align=center] (23) at (9, 9.25) {\small{Сообщение}};
-		\node [style=none, text width=3cm, align=center] (24) at (21, 9.25) {\small{1 байт}};
-		\node [style=none, text width=3cm, align=center] (25) at (9, 4.5) {\small{Сообщение}};
-		\node [style=none, text width=3cm, align=center] (26) at (21, 4.5) {\small{1 байт}};
+		\node [style=none, text width=3cm, align=center] (23) at (9.25, 8) {\small{Сообщение}};
+		\node [style=none, text width=3cm, align=center] (24) at (20.75, 8) {\small{1 байт}};
+		\node [style=none, text width=3cm, align=center] (25) at (9.25, 5.5) {\small{Сообщение}};
+		\node [style=none, text width=3cm, align=center] (26) at (20.75, 5.5) {\small{1 байт}};
 		\node [style=none] (27) at (10, 2) {};
 		\node [style=none] (28) at (20, 2) {};
 		\node [style=none] (29) at (20, 0) {};
@@ -39,7 +40,7 @@
 		\node [style=none] (36) at (14, 5.25) {};
 		\node [style=none] (37) at (14, 2) {};
 		\node [style=none, text width=3cm, align=center] (38) at (11.75, 3.5) {\small{Сообщение}};
-		\node [style=none, text width=2cm, align=center] (39) at (18.5, 3.5) {\small{Чтение очереди}};
+		\node [style=none, text width=2cm, align=center] (39) at (18, 3.5) {\small{Чтение очереди}};
 		\node [style=none, text width=5cm, align=center] (40) at (15, 1) {\small{Очередь в разделяемой памяти}};
 	\end{pgfonlayer}
 	\begin{pgfonlayer}{edgelayer}
