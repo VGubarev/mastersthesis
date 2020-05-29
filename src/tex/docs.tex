@@ -91,12 +91,18 @@
 }
 
 \engabs{
-\begin{center}\large SUMMARY\\\small OF A GRADUATION THESIS \end{center}
+\begin{center}
+\small\bfseries Ministry of Science and Higher Education of the Russian Federation\par
+\MakeUppercase{\scriptsize FEDERAL STATE AUTONOMOUS EDUCATIONAL INSTITUTION OF HIGHER EDUCATION}\par
+\begin{singlespace}\MakeUppercase{''NATIONAL RESEARCH UNIVERSITY ITMO``}\end{singlespace}
+\end{center}
 
-Student: Gubarev Vladimir Yurievich
+\begin{center}\large ABSTRACT\\\small OF A MASTER'S THESIS \end{center}
+
+%Student: Gubarev Vladimir Yurievich
 
 \begin{center}
-\textbf{Development and implementation of efficient inter-process communication methods for distributed systems}
+\large{Development and implementation of efficient inter-process communication methods for distributed systems}
 \end{center}
 
 Nowadays distributed systems are widely spreaded. They are usually designed to work in various environments as a set of cooperating processes. At the same time capabilities of modern hardware allow to deploy groups of that processes within a single machine in order to achieve better performance. In this case efficient inter-process communication (IPC) methods become a crucial element of high-performance distributed systems.
@@ -104,6 +110,14 @@ Nowadays distributed systems are widely spreaded. They are usually designed to w
 The present work is focused on developing efficient IPC methods. Based on the most efficient IPC in Linux, shared memory and futex, it introduces new methods of low-latency IPC. They are transparently provided via a generic interface. The interface automatically and transparently for programmer uses TCP to communicate over network with remote processes and low-latency shared memory-based method for local processes.
 
 Proposed methods show significantly lower latency with local processes than TCP-based without any additional difficulties for programmer.
+
+\vspace{24pt}
+
+\noindent\begin{tabular}{lll}
+    Student & Gubarev V.Y. & \signatureplace\\
+    Supervisor & Kosyakov M.S. & \signatureplace\\
+\end{tabular}
+
 }
 
 %% Эта команда генерирует титульный лист и аннотацию.
