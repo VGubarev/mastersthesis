@@ -24,7 +24,7 @@
 		\node [style=none] (21) at (18.5, 9) {};
 		\node [style=none] (22) at (23, 9) {};
 		\node [style=none, text width=3cm, align=center] (23) at (9.25, 10) {\small{Сообщение}};
-		\node [style=none, text width=5cm, align=center] (24) at (27, 12) {\small{Контроль времени жизни соединения}};
+		\node [style=none, text width=5cm, align=center] (24) at (26.5, 11.5) {\small{Контроль времени жизни соединения}};
 		\node [style=none, text width=3cm, align=center] (25) at (9.25, 7) {\small{Сообщение}};
 		\node [style=none] (27) at (11.5, 2) {};
 		\node [style=none] (28) at (18.5, 2) {};

@@ -1151,7 +1151,7 @@
     \bigskip
     \begingroup\banhyphens
 %    \noindent \textbf{\@strings@Student}~\theauthorshort\;\hfilll \textbf{\@strings@Group}~\thestudygroup\; \textbf{\@strings@FacultyOf}~\thefaculty\;\par
-    \noindent \textbf{\@strings@Student}~\theauthorshort\par
+    \noindent \textbf{\@strings@Student}~\theauthor\par
     \noindent\textbf{\@strings@Group}~\thestudygroup\; \textbf{\@strings@FacultyOf}~\thefaculty\;\par
     \noindent \textbf{\@strings@DegreeLevel} \@strings@DegreeName\par
     \noindent \textbf{Направление подготовки} \thespecialty\par

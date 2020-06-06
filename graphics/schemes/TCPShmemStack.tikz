@@ -14,7 +14,7 @@
 		\node [style=none] (11) at (30, 8.25) {};
 		\node [style=none] (12) at (30, 5.25) {};
 		\node [style=none] (13) at (23, 5.25) {};
-		\node [style=none, text width=5cm, align=center] (24) at (25.5, 7.5) {\small{Контроль времени жизни соединения}};
+		\node [style=none, text width=5cm, align=center] (24) at (26.25, 9.5) {\small{Контроль времени жизни соединения}};
 		\node [style=none, text width=3cm, align=center] (14) at (26.5, 6.75) {Модуль TCP};
 		\node [style=none] (15) at (7, 7.25) {};
 		\node [style=none] (16) at (11.5, 7.25) {};
